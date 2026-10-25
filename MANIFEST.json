@@ -1,0 +1,1015 @@
+{
+  "repo": "LegionS",
+  "root": "/home/user/Projects/LegionS",
+  "file_count": 168,
+  "files": [
+    {
+      "path": ".editorconfig",
+      "size": 404,
+      "sha256": "912f9cecd866eda710d228ec1713c434e792d157122dab00a23b46200f5f60c7",
+      "category": "config"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "size": 374,
+      "sha256": "9b69d3970e23dc645ca6c48ff02c1203089fdd755c0240bacf121702a1d72818",
+      "category": "config"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 1197,
+      "sha256": "5c47615e16eb5de7212090202d7ca81e0718b696e86ca97957c396c504a2bf01",
+      "category": "config"
+    },
+    {
+      "path": ".gitignore",
+      "size": 381,
+      "sha256": "680110657111fdbf214348cf77d55dbf928cce36224509ad978f39512764ea29",
+      "category": "config"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 2580,
+      "sha256": "df194519dbbd7a644b8cacf713d87b157428d6c6e5323c24b57c0a9c6a32321b",
+      "category": "doc"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "size": 6008,
+      "sha256": "cd0653062d6f87b10cfdb522f95f4bdb0891f8b95632070df043663fd91561e8",
+      "category": "doc"
+    },
+    {
+      "path": "INDEX.md",
+      "size": 4228,
+      "sha256": "801ddb67ddfc251bf5d434e540aa9f3a177dce733edd73ed946c1cc0d952db65",
+      "category": "doc"
+    },
+    {
+      "path": "MODERNIZATION-TODO.md",
+      "size": 13628,
+      "sha256": "2f8cdc66c670979b517089608cc01222dbf6b12c62f1dbd8475862482f5f3feb",
+      "category": "doc"
+    },
+    {
+      "path": "Makefile",
+      "size": 634,
+      "sha256": "43fb4a24759459cfca865ee81a0041026e719f98f53bb90b0f2acdfbb899a6cf",
+      "category": "build"
+    },
+    {
+      "path": "README.md",
+      "size": 2861,
+      "sha256": "3c14ac2272f8c7623c81ec7f76ca05845678ada10efa04a9821c9ab5d6bff6ca",
+      "category": "doc"
+    },
+    {
+      "path": "ROG_DRIVE.md",
+      "size": 3162,
+      "sha256": "3f73b80f95ad9896080d16ed46e1ce3ac9955902c9c683d193e8d21000ddad24",
+      "category": "doc"
+    },
+    {
+      "path": "TODO.md",
+      "size": 5492,
+      "sha256": "595eda59ec52ed7d8a9261b432283ccac86d480497a6dc407fad0d34245eca00",
+      "category": "doc"
+    },
+    {
+      "path": "docs/README.md",
+      "size": 939,
+      "sha256": "bf5155e4ffac80b01353d295f424cb78cbe616b6fa1c67ab6737ee5c72dbca21",
+      "category": "doc"
+    },
+    {
+      "path": "docs/display-blackscreen.md",
+      "size": 7534,
+      "sha256": "45894727f48618530137fb2ed6d8b18e8bbd42a42baf28c57ffc8c3b3262d919",
+      "category": "doc"
+    },
+    {
+      "path": "docs/gamepack-plan.md",
+      "size": 41491,
+      "sha256": "809c1d5e8d385ab74a865d95e130c38bd0b73d03fa5b64a232c1189a5183f391",
+      "category": "doc"
+    },
+    {
+      "path": "gamepack/.gitignore",
+      "size": 66,
+      "sha256": "f935256e4b86aff9761ef1288f09fcdbb42f433d47ae9ac593aa8382faaa11c9",
+      "category": "go-module"
+    },
+    {
+      "path": "gamepack/Makefile",
+      "size": 520,
+      "sha256": "898804bfc0295c5414095bf64f04a77716474ac3987efaeb94bc05e6f28e3051",
+      "category": "go-module"
+    },
+    {
+      "path": "gamepack/README.md",
+      "size": 5689,
+      "sha256": "4de0a5702e942a0391a2d2acda7b77851de466fdbee402222f96850a358e2a6a",
+      "category": "go-module"
+    },
+    {
+      "path": "gamepack/cmd/gamepack/main.go",
+      "size": 7592,
+      "sha256": "582c4c55e13bdf1f42f0aebef64991e8225c5927c51ce7b221d41ba03f0176b8",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/gamepack",
+      "size": 6540765,
+      "sha256": "957b506068ba4e97cc21f184020ea50b6cfb88c2f02bb79c0eb381777e944b38",
+      "category": "go-module"
+    },
+    {
+      "path": "gamepack/go.mod",
+      "size": 1171,
+      "sha256": "1b67c178c0a13cd79bd1160682cb5c284d8ff20c40aad1f171bd4b7aa05386ba",
+      "category": "go-module"
+    },
+    {
+      "path": "gamepack/go.sum",
+      "size": 4215,
+      "sha256": "0e19e60a6f92483e1b9164e2b5cd14a4526bb7c31a9d683184dbc8a8f3220452",
+      "category": "go-module"
+    },
+    {
+      "path": "gamepack/internal/catalog/catalog.go",
+      "size": 6442,
+      "sha256": "6e32eb8163f88aad59c64c0c2b0686c676d86c57ffb7ebc429db89e4ef69074e",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/catalog/catalog_test.go",
+      "size": 4325,
+      "sha256": "542849540401cd3ec0e806b72c72c59ccf8acf0a6c084e44f0fdfd90d1561362",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/catalog/helpers.go",
+      "size": 79,
+      "sha256": "ff6bae01d05e5ece82744db75b52e148e47316e1fbf6a6d9c7dceb71a51bc0b5",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/catalog/vdf.go",
+      "size": 4112,
+      "sha256": "f229664e41fe5c091ff76e6495bcf86da6ba7bbdd8ebb738509a3264d44e5de5",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/cfg/config.go",
+      "size": 3632,
+      "sha256": "8cb6c9b2ef537e79e193df26bf7cd5b9f85ec7ee780bc55b4afbeb741f05b0b5",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/cfg/config_test.go",
+      "size": 1666,
+      "sha256": "8a0f9171f8dbdd154c6592839264aee99963b4580f21a4a2017472a4d0bb7e91",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/cfg/hardcoded_test.go",
+      "size": 1760,
+      "sha256": "f6864ef14f6a69fad6626655a365e09f317976aee25afc6667f0fb5f3180f72a",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/compress/compress.go",
+      "size": 3633,
+      "sha256": "b3d8bcede8c90c43231e74eab23ab9e88ed12026fe7849409def5b0dbf900a9f",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/compress/compress_test.go",
+      "size": 2499,
+      "sha256": "0117c2d0583f0e789e4ec99cdf87e28b500ab160526c4471fdfa278b7164e81e",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/compress/sha.go",
+      "size": 242,
+      "sha256": "c8eda640750805fb53a90d59505d9539f1a65e0cf95d2a558b767214b2e29634",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/nswitch/nswitch.go",
+      "size": 3964,
+      "sha256": "19d419809e2f407a7d3d62638ee13e396fb3dceff97c57b9a7a5797f6e03251a",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/nswitch/nswitch_test.go",
+      "size": 1058,
+      "sha256": "0d43a48b47ce6921cd477ca4b058ea666aa73fc9fa09974c0092fdf9f82fd29a",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/pack/helpers.go",
+      "size": 109,
+      "sha256": "e0ecccc9aa65e848ce2ff6994174c397848a1b9bb1f15d62b24ec20c515c0e7b",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/pack/manifest.go",
+      "size": 2231,
+      "sha256": "3fb421785b8d2b9f339e901c61a37fa6ace14486441e899694bd5677de3ca62a",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/pack/manifest_test.go",
+      "size": 1983,
+      "sha256": "c8cc2a131d973d712e40e2b558c8a312a7c25cfc2b9015055112b8db49012418",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/pack/pack.go",
+      "size": 4905,
+      "sha256": "1c60db56d1dd37e1da8b7487ab46b26cf06fcaa56cf96086bf33edf7aaa240a4",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/pack/pack_test.go",
+      "size": 1788,
+      "sha256": "e86360827c83c621403ebbd91b1388f54c3cc7dec04e02856220ba3f65e0837b",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/proton/proton.go",
+      "size": 4125,
+      "sha256": "fbeccee9d328d67a6626eb8be287e2b6d7a773bc5f9a0058d7f7c8a80471c588",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/proton/proton_test.go",
+      "size": 554,
+      "sha256": "974666fb35e0e5cb427c5609e18e60fdce909a8244daa264fae011f7b5e7abd2",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/bundle.go",
+      "size": 2770,
+      "sha256": "5443e67a49c42b77a8dfcf342913986950689a8c7f411c38e8140cb8d508bd32",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/cfg_test.go",
+      "size": 243,
+      "sha256": "15863c2a77b42382225fe739bbf8b479e5c40c18a3165854a6855c27c0633c6f",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/discover.go",
+      "size": 3567,
+      "sha256": "f2becb906867faaa11a0ee8ed9fc3eaf9ca8d4409c3e6a2cd9ef04a9c8a2d62d",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/discover_test.go",
+      "size": 1983,
+      "sha256": "ecc73e99cd56dda05e36e849e3c723cf9d45fcbe7b9e5add538d5a171565fbd0",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/files.go",
+      "size": 860,
+      "sha256": "4b71a80c27d1005e7d548c13c72f76b351e796e5286aefa59bd484959d59cd7c",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/link.go",
+      "size": 808,
+      "sha256": "f10cca1c3746848d0f1a0d26996fb890a582bd3537ffcee230d77960358620db",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/restore_test.go",
+      "size": 2241,
+      "sha256": "9f6d023ae08f31465c85f04c47bfb5159b8dde7df5615650a22ec6f141664d01",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/saves_test.go",
+      "size": 959,
+      "sha256": "c55bb2b85427f935513cfc2c9352212ddb83aa9980f864f92285ee8c4f450b8a",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/saves/stamp.go",
+      "size": 98,
+      "sha256": "d4dbcb8e7d84beb61050229823f91a86e1ecc7e0bef415f1fb7f2d39593652c2",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/state/journal.go",
+      "size": 1561,
+      "sha256": "c1ccd39aae8ed192909ae9b09bf96b80ceddf647ad24df37203d4f469b49366a",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/list.go",
+      "size": 8403,
+      "sha256": "5b1a2a9a5a6b1a70d8e3ba8d5463e4cd0c36b7ec8dd696a895a35989756b830e",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/menu.go",
+      "size": 1569,
+      "sha256": "a780cb92997af4cb5b67196ca51268763f376401bbd6f569284385c68e559101",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/model_test.go",
+      "size": 1168,
+      "sha256": "507c967fc45480b6c9e9f22ae6d9bcc2898ddeedd62dfd52095fa9a47a5f848d",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/run.go",
+      "size": 7295,
+      "sha256": "08f1b81b90d5d1ff8b6bf75efc31737780ff803695d2ae438abf0a7f985ca44f",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/run_test.go",
+      "size": 1955,
+      "sha256": "ef1845e0bd684ff2489e0832ad94225a3fd817d0b67df315360f5102b9e48ca9",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/scroll_test.go",
+      "size": 6519,
+      "sha256": "8096847633765f595a6cc9b04c5cca6e0f1b0340ccc2eda715d1a5e6d7cb38d9",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/tui.go",
+      "size": 2550,
+      "sha256": "fdd5fe8018c24e1ce081b51bae31acd4b0976f68a493568e1b18bfb85770becc",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/tui/tui_test.go",
+      "size": 2485,
+      "sha256": "526164ad4c15f8138d492e9549ff5e490cf463eff6d1f5cb2855c5c69581fe84",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/unpack/safety_helpers.go",
+      "size": 3214,
+      "sha256": "f2c06883cf7991d3045fdd076acf6c47fa43a5dcc72276fee615d286f9ccae9b",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/unpack/safety_test.go",
+      "size": 2386,
+      "sha256": "6f2146aecc2a7f80205a374b9cc9640b71e07134e6d23cdfdafd00e586becf0b",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/internal/unpack/unpack.go",
+      "size": 6915,
+      "sha256": "425ee972046972cae0333edffd7de2732758352d6bfb6d7d9f6a4a74bdbc527f",
+      "category": "go-source"
+    },
+    {
+      "path": "gamepack/scripts/coverage-check.sh",
+      "size": 1286,
+      "sha256": "de0ac27d25377d2a61082c177ad2bd546b05b94dd59050a4d1e59aad10a5ae02",
+      "category": "script"
+    },
+    {
+      "path": "gamepack/testdata/shortcuts.vdf",
+      "size": 28299,
+      "sha256": "e97516c05921913bd258411eb69770bc755365482a24bd0f5cbeea9befe2b6b7",
+      "category": "testdata"
+    },
+    {
+      "path": "games/README.md",
+      "size": 591,
+      "sha256": "6561ddfdae669ae6b3325e4e727d50d59d1f3e072a02e029061de5b9a13c6bf3",
+      "category": "doc"
+    },
+    {
+      "path": "games/SHORTCUTS.md",
+      "size": 5822,
+      "sha256": "68bfa2c3278f4b1e436fc0e40ce7b029c5f464d950d3c04f82446a6579070f72",
+      "category": "doc"
+    },
+    {
+      "path": "games/UNLAUNCHED.md",
+      "size": 3122,
+      "sha256": "072f0462e04b912f4d87c5c181c75eb10e21ffd9c2c32ed76685c84ef387ac66",
+      "category": "doc"
+    },
+    {
+      "path": "go.work",
+      "size": 26,
+      "sha256": "88bdbbbcba406f4e33a758cb8cba97cf10a06a455ac028fd70cfcadad01fe71e",
+      "category": "build"
+    },
+    {
+      "path": "llms.txt",
+      "size": 1886,
+      "sha256": "39d5fd9bb1f9b4be64b31d240c7d462ec6fc8747ee4a0b182d8ff6bc5248ddb4",
+      "category": "snapshot"
+    },
+    {
+      "path": "migration/DRIVE_EXPANSION.md",
+      "size": 7978,
+      "sha256": "1d628bb14f91826d3e723d605cd49ad0efc28cce92cd0cb03b90044f57c6d353",
+      "category": "doc"
+    },
+    {
+      "path": "migration/LEGION-GO-S.md",
+      "size": 2300,
+      "sha256": "6decbca71eecdac1fa582968299d755dcb94ca6a4916b7a1d043ce5bf72654b8",
+      "category": "doc"
+    },
+    {
+      "path": "migration/README.md",
+      "size": 497,
+      "sha256": "db1c3d658263609a85f96b071d436788485004340cad9ba6ac22de05d9883d98",
+      "category": "doc"
+    },
+    {
+      "path": "migration/STATUS.md",
+      "size": 2670,
+      "sha256": "4d84bfcae20a1b839dbc4d5d34ac2e7422d2013827af67cf166cf6a450667a76",
+      "category": "doc"
+    },
+    {
+      "path": "proxmox/README.md",
+      "size": 570,
+      "sha256": "ab7d79ac4e31168f89cd3d210a77d94ab045a51f99e8d2f7c34889635625a2ff",
+      "category": "infra-doc"
+    },
+    {
+      "path": "proxmox/rog/audit-2026-08-28.md",
+      "size": 10521,
+      "sha256": "80afb4aaeae26e45d2f46dcb756df5d273186b1a720b1fc78dee4a525a169df8",
+      "category": "infra-doc"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/_probe.txt",
+      "size": 18,
+      "sha256": "a3599220850971bfc5e8c59101ac74bb81d0c1e1648dff309023fb9d8ef3d7db",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/_status.txt",
+      "size": 55,
+      "sha256": "99ddaad8453bf709e6afb4b175a0078aca4fbc31fb7460d81580c1fe468334c3",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/blkid.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/boot.txt",
+      "size": 958,
+      "sha256": "de5ee922dd43c724c21681e004e11b3a81128d106e0de64d8c317b1303c4c1fd",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/brew-list.txt",
+      "size": 92,
+      "sha256": "07b856d743c8d3c19482843ab48c8aaeb4e0b0478dca9119e4251507c38ce285",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/caddy.txt",
+      "size": 177,
+      "sha256": "124bca61b64b20c19e4f9e7ff831592843a8154fd2bb08d6e27055c491728b59",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/cpu-mem-gpu.txt",
+      "size": 3082,
+      "sha256": "27c1195308548636a734bf88475e020499498590d426587c0cedcc362ecc5e8f",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/df.txt",
+      "size": 2021,
+      "sha256": "3c90a6e38500d85cc500a03117e39f1955a24ed905274093db6aaf5781178ab3",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/dnf-list.txt",
+      "size": 83,
+      "sha256": "c5a61b6e7f249a1af220c5b83438a58bb682e38e133e97902cbb2532a9947d3b",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/docker-compose.yml",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/docker-images.txt",
+      "size": 40,
+      "sha256": "e8c4e79a2fdd137ff573bb975f105d7079d625830f9d0f15d1d02e79a1c393ed",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/docker-inspect.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/docker-ps.txt",
+      "size": 40,
+      "sha256": "e8c4e79a2fdd137ff573bb975f105d7079d625830f9d0f15d1d02e79a1c393ed",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/docker-volumes-networks.txt",
+      "size": 95,
+      "sha256": "ba42d586cf253e2f74f085922f9946cd66a09526977c301834ba8d6063463e46",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/dotfiles-ssh-git.txt",
+      "size": 309,
+      "sha256": "38919f25e2b5dc4868583e7f8ab45e8bc00971d4369961e76e1f1360d75e09cc",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/firewall.txt",
+      "size": 286,
+      "sha256": "7f262d0f9e4c35221d1b13b674c22464f2a7a35de0e4d366637f066a606b09d4",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/flatpak-list.txt",
+      "size": 5468,
+      "sha256": "ec54d8bf8f416e0604993a8a547584cecb3c2cdb9e33ad338f86194465e8997f",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/fstab.txt",
+      "size": 753,
+      "sha256": "2c5d9552e47491c3b68638b230e8cda121199cd2799b38ef6c6011791a723f81",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/git-proxmox.txt",
+      "size": 272,
+      "sha256": "55438689691bc334438a18d7b68cee942065d9de3a7aa3f1e35ede7b34e43980",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/hardware-os.txt",
+      "size": 1667,
+      "sha256": "50128e0302431e6d8366b6947d6e94c490feca0ac33e2563d9f196f0438cdf90",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/hosts-resolv.txt",
+      "size": 1293,
+      "sha256": "c7c0b0ffbb7c5051c29939879ce941735482c0b874b5387e302814d4a83e589e",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/lsblk.txt",
+      "size": 2574,
+      "sha256": "99bec868b2a098836e10ada5cf2cf2e68c7a08c00b1d923415d2e859d266f08b",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/mnt-media.txt",
+      "size": 331,
+      "sha256": "6d9d06d5750e38679092c0947e92f056954040dd16589b615df1fd2c3f697e7f",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/mounts.txt",
+      "size": 3959,
+      "sha256": "760ca1e0a55d01cccca58b3067e5ee01d9f1e4c59668a225e82eebfb71bf5a0e",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/network-tailscale.txt",
+      "size": 7940,
+      "sha256": "fc874b9dacc639324ddce883d2ceb1c58e4be1cbf01093118b019692f44c9234",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/rpm-list.txt",
+      "size": 86470,
+      "sha256": "ada43d6eb16982bc625cf8e7c045ef17bac271656c3d261cbda90a58d15438ac",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/seafile.txt",
+      "size": 83,
+      "sha256": "db851815bdacb692fbcb192255005cff089a288584cffd558368d8042a4427ca",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/snap-list.txt",
+      "size": 38,
+      "sha256": "e10f40629d7e7336b9d00cd7d6119211f037bcdf573ede85aadf9b69b83293a7",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/syncthing.txt",
+      "size": 40,
+      "sha256": "12475a65a7a3b8c9fd0782c3bc994e95ea266c2a3f3cbe5bce94ad5fbe19e0aa",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/systemd-system.txt",
+      "size": 5139,
+      "sha256": "e2790924cd15571da85a9a3abe7e214ccf4917de69939f2445ac13de139967de",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/systemd-unit-cats.txt",
+      "size": 13614,
+      "sha256": "c01907f7033e8ccf7c9b13bbcf627981555f761cb8fb87de8bc29c38df6aed9b",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/systemd-units-list.txt",
+      "size": 3404,
+      "sha256": "379bb0f12737f42889f936739bd1102c0baa2ac176fc3f27389fd34b05b0a18f",
+      "category": "snapshot"
+    },
+    {
+      "path": "proxmox/rog/snapshots/2026-08-28/systemd-user.txt",
+      "size": 3881,
+      "sha256": "422f53db20d2d0d68f8731fc52076e9a96cecf551eb2e4f720ceff0c653b3bf8",
+      "category": "snapshot"
+    },
+    {
+      "path": "saves/README.md",
+      "size": 369,
+      "sha256": "8456ea633848999a772025282dcf44fbeed8066cfc12d587735805b4617396e0",
+      "category": "doc"
+    },
+    {
+      "path": "saves/SAVES.md",
+      "size": 3536,
+      "sha256": "f6ec32a8322edb9bca845a4dd6e8a7d3f67aa484491ff19401c878a77c17e61d",
+      "category": "doc"
+    },
+    {
+      "path": "state/CURRENT.md",
+      "size": 5106,
+      "sha256": "e245e7574df8fa536701c5beb42aaa57d0367bd983694971278f84a07bd0bcae",
+      "category": "doc"
+    },
+    {
+      "path": "state/README.md",
+      "size": 283,
+      "sha256": "4a15958cc5c022707d636bb9b36408a32e658bbf923499b1b4ba0d3803fcb25e",
+      "category": "doc"
+    },
+    {
+      "path": "steam/CONFIG.md",
+      "size": 3588,
+      "sha256": "4cb68e383482d5bcd95cbdf23a1fc9cf4efa1eca7daa59163cea0f39287dce54",
+      "category": "doc"
+    },
+    {
+      "path": "steam/README.md",
+      "size": 347,
+      "sha256": "08817f669509639314da723c3c0d90b6869b896209beff03bf8ee0f7af97c534",
+      "category": "doc"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.editorconfig",
+      "size": 280,
+      "sha256": "3a0e39f4732b776c9fa258901594e3d28c01624c7ad22ddf72f4cd86acd23bba",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.gitattributes",
+      "size": 163,
+      "sha256": "0b780bcddb43f8a08ce45b2f10f29b7a4b7ec94e6f252f8b3636f14ba9057b11",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.github/dependabot.yml",
+      "size": 239,
+      "sha256": "77cfaec1cdf0dfffa2a888db136757c8b5c73229c5e0e3331ead6b85b900ea2c",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.github/workflows/ci.yml",
+      "size": 1377,
+      "sha256": "da8556f2723246f026fbe8feaeea700d189fcd8d804af09521a1c1e2e1d66414",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.gitignore",
+      "size": 244,
+      "sha256": "0e2244a0374a518e81319629a9ab0ddeeb2553db091af98b1dd5c714458e0ced",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.pre-commit-config.yaml",
+      "size": 656,
+      "sha256": "4ca3ebb0594a0d2a8d348ed0eebf7286ed7ec4c28c6cb25924edca3df97410b7",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.pytest_cache/.gitignore",
+      "size": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.pytest_cache/CACHEDIR.TAG",
+      "size": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.pytest_cache/README.md",
+      "size": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.pytest_cache/v/cache/lastfailed",
+      "size": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.pytest_cache/v/cache/nodeids",
+      "size": 7419,
+      "sha256": "24cd83211812e089ba5ad15c2d25506aac98d6044d1f1b8d2750cef60231eb7d",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/.python-version",
+      "size": 5,
+      "sha256": "49a506dd32096b010d75205acf3430c9ae6c40351888129499e5a5e487126c93",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/AGENTS.md",
+      "size": 2896,
+      "sha256": "7f916e9b55a0cfb84eef74cbb01215317b8a6e8946de5d4a93c37acebe7df28e",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/MODERNIZATION-TODO.md",
+      "size": 14816,
+      "sha256": "72546cc534f18fe2da5eee09216664ce974bc4097092bddb13fb9d57e27d0195",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/Makefile",
+      "size": 1014,
+      "sha256": "99914f70b9c9f01211b8ab8c8c87e6493c30babc56f8de3e05424667bf3915c9",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/README.md",
+      "size": 8618,
+      "sha256": "c8cfddd9e2f85cdb5af61cdcda01b4fa3230164519d23471140c8e051b0e90c7",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/artwork_manager.cpython-313.pyc",
+      "size": 28667,
+      "sha256": "b7d85900c593cb8c4573076d90d22541610c18f454ab26fd5580aebec15921b7",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/config.cpython-313.pyc",
+      "size": 8526,
+      "sha256": "5b822a32bcecbace33b9bac121ae344fc6867203d1ae58bf083934d46ca50a70",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/fixer.cpython-313.pyc",
+      "size": 13676,
+      "sha256": "9edbf1b50d2884143b72b03ed9ae6b9c9faf22998f0518b27b3034b20c0f608c",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/game_manifest.cpython-313.pyc",
+      "size": 13118,
+      "sha256": "2c0ea6a96665244c44af672fe43ed3f29313142bdfb39f0f9e5bf90a3bc25ea7",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/game_scanner.cpython-313.pyc",
+      "size": 19622,
+      "sha256": "1aebdabfe0e26bbe21366241a007daca957cd99e2862ecb572b42f56c8e37301",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/logger_setup.cpython-313.pyc",
+      "size": 1636,
+      "sha256": "04f0853a9bd53dae3a274123e4ce93bbd2ff28c147794b2dfdfc4499512aff5b",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/main.cpython-313.pyc",
+      "size": 53259,
+      "sha256": "51289013eebeaba5d9e72b1ef07c092591309719767719f804e0267a7deebaaf",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/shortcut_builder.cpython-313.pyc",
+      "size": 29341,
+      "sha256": "942191e799fa2bde1befaa1d693b28d8cf2878671cc0d5dedc69fa159fd4689a",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/steam_paths.cpython-313.pyc",
+      "size": 9522,
+      "sha256": "1df62b719cea12d6460ae254b6c5cbff92844f82218e2823bf286e1d91f87afa",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/__pycache__/vdf_manager.cpython-313.pyc",
+      "size": 9397,
+      "sha256": "13b3f545de1e3b6866bfced63f05ea237df9ee7e729fb72f4703620a073f2f98",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/artwork_manager.py",
+      "size": 20149,
+      "sha256": "71be52957ae576f8340d33a1a62e07ea00992173a10186628735370894defd54",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/auto-run.py",
+      "size": 2352,
+      "sha256": "4795261b63a370feb10afe50224b4e62bec8fee1dd6ac29957be0c72319f4ee3",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/config.py",
+      "size": 10048,
+      "sha256": "76bc8cab1c98b399d8ba345c6da5dbeacd0acf3ead6946ec0403a52a09419cd1",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/docs/README.md",
+      "size": 810,
+      "sha256": "b262aec8a0a0acc75168c2ff2161a1b5baf9838106b1d21121716d080a453052",
+      "category": "doc"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/docs/archive/POSEIDON-NOTES.md",
+      "size": 2998,
+      "sha256": "92436fb7c457af3da0c850b2f1febb182409066f0c01a67cb877dfb8310e880c",
+      "category": "doc"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/docs/archive/SESSION-LEARNINGS.md",
+      "size": 12009,
+      "sha256": "8c9fb4531459248509e0460f69cafaaad9061946d6fa9c8b09d114dc8e586cec",
+      "category": "doc"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/fixer.py",
+      "size": 10157,
+      "sha256": "1d7a5c2a7c6ecbed84335b23c8dd6a2a500c4c422b09dac04f62501ca5883384",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/game_manifest.py",
+      "size": 8066,
+      "sha256": "6e74592afe9c68ce0a4cf99969a87a66fdd476b87803bf8ce18e27d309924a7e",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/game_scanner.py",
+      "size": 15195,
+      "sha256": "00244154d31247584a3149173c6ac43279d014f3cd6e03a006124394e907c1c8",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/logger_setup.py",
+      "size": 947,
+      "sha256": "b8a0019b86dd3af6b01e45a6e38a14d8112f7ea36cdfb0da43fe2d3d2b59e8c9",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/main.py",
+      "size": 41246,
+      "sha256": "f346edb2f1a205042e45c22c76e106bc1a74b546e6079d571f42f45677e8992e",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/refresh-art.py",
+      "size": 1030,
+      "sha256": "fc8043e51c6671404bca4033bfc6e0da717525c2b3ce483637270b6e1c1c3922",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/requirements.txt",
+      "size": 26,
+      "sha256": "379643a12375ae0419a6e8763dd5ec2cf47a9df19d527c0c643d304e69eb474d",
+      "category": "tool"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/run.sh",
+      "size": 1650,
+      "sha256": "4d183efdbc29ad4753c9f504f4c1b4f55b2c66e5e2925e127dbc28fbb432af32",
+      "category": "script"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/shortcut_builder.py",
+      "size": 22721,
+      "sha256": "d16a3887081caf871b466819e8f795afff2b55a18296adb4f65e21ea18871969",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/steam_paths.py",
+      "size": 6534,
+      "sha256": "21161847dcb546afac21c0317b9e3617fd928eca25875bf7630deadf57039873",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/__pycache__/__init__.cpython-313.pyc",
+      "size": 174,
+      "sha256": "e1c0382ddf3f3d44975ad62d1a7d635ace81849c24d785b87a7bf0b8b4f15f82",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/__pycache__/test_artwork_fixes.cpython-313-pytest-9.1.1.pyc",
+      "size": 11916,
+      "sha256": "b4a40fa078318b46ee98063baf927b764142e2166b63fb5a1bcf453bc38a48eb",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/__pycache__/test_helpers.cpython-313-pytest-9.1.1.pyc",
+      "size": 835,
+      "sha256": "87a7fd0229c1e56426711565cfce4f562b81a9a5a3ef3a774efbbf7d861e1ccc",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/__pycache__/test_manifest.cpython-313-pytest-9.1.1.pyc",
+      "size": 17828,
+      "sha256": "a2dbf20220b9d39639fbe953c461626fe1e2b47426d304fae750c76d990cdf12",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/__pycache__/test_safety.cpython-313-pytest-9.1.1.pyc",
+      "size": 47012,
+      "sha256": "0871077137a849a3a81fd72110202b6cc937551b9ca053dec8555f2964348ce0",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/test_artwork_fixes.py",
+      "size": 6787,
+      "sha256": "1dc64c8514c7793401e075e29ad9a7a0d29ca7915a925da2a5695a42adf03c1c",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/test_helpers.py",
+      "size": 219,
+      "sha256": "cc9981879cd92d9c83cb06eb2f4fdd575b2927b82a20665760a41755f3c96d23",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/test_manifest.py",
+      "size": 10628,
+      "sha256": "57d4a07f5d9ab461de4132b3f2c7b209cdc099da06222c6514e4aaa939d5f3ef",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/tests/test_safety.py",
+      "size": 32160,
+      "sha256": "a3be347bc5dc321f94c0c77d0dea90f585e6b92888adbfd84f93f926305a1b74",
+      "category": "test"
+    },
+    {
+      "path": "tools/Add-Non-Steam-Games-Linux/vdf_manager.py",
+      "size": 6065,
+      "sha256": "34d2036d401a29f1a8843053987ea921d124cb575bf1e52a8ef4b2fa29aa7cad",
+      "category": "python-source"
+    },
+    {
+      "path": "tools/README.md",
+      "size": 321,
+      "sha256": "742228a49a7447c8bea68cdfacf527a737b112a317f67d4d760b75c2b9a6e8b4",
+      "category": "tool"
+    }
+  ]
+}

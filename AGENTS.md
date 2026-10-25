@@ -19,6 +19,7 @@ Go gamepack for the Bazzite handheld (`rog`). Main @4189ee5 merged
 
 ## Docs
 
+- `INDEX.md` — full file/directory catalog (human). `MANIFEST.json` — machine-readable file manifest (paths, sizes, sha256).
 - `README.md` (49 lines) — machine reference + layout table; start here.
 - `ARCHITECTURE.md` — machines, Tailscale IPs (dynamic, reverify), Steam paths.
 - `ROG_DRIVE.md` — old Micron 2400 ROG drive on bazzite-mobile (data ref).

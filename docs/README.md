@@ -1,5 +1,7 @@
 # docs — index
 
+See also the repo-wide [INDEX.md](../INDEX.md) and [MANIFEST.json](../MANIFEST.json).
+
 - [`display-blackscreen.md`](display-blackscreen.md) — game-mode idle black-screen saga: root cause, fixes, verification checklist, recovery.
 - [`gamepack-plan.md`](gamepack-plan.md) — gamepack design/plan (live-verified ground truth, schemas, edge cases); live drift in `../gamepack/README.md`.
 

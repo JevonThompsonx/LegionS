@@ -9,4 +9,4 @@
 | [archive/SESSION-LEARNINGS.md](archive/SESSION-LEARNINGS.md) | Session learnings: manifest design, relocation matching, safety guards |
 
 `archive/` is a historical record, not a TODO list — do not execute items found
-there. (The root `POSEIDON-NOTES.md` / `SESSION-LEARNINGS.md` are redirect stubs.)
+there. (Root redirect stubs removed; `docs/archive/` is canonical.)

@@ -1,0 +1,40 @@
+# LegionS
+
+> Merged machine reference repo for the Lenovo Legion Go S (Z2 Go) handheld (Bazzite), consolidating ROG Ally repos, proxmox host audit snapshot, and the Add-Non-Steam-Games-Linux tool.
+
+## Start here
+- [README.md](README.md): machine reference + layout table
+- [INDEX.md](INDEX.md): full file/directory catalog
+- [MANIFEST.json](MANIFEST.json): machine-readable file manifest (paths, sizes, sha256)
+- [AGENTS.md](AGENTS.md): agent working notes, gates, known gaps
+
+## Architecture & state
+- [ARCHITECTURE.md](ARCHITECTURE.md): machines, Tailscale IPs, Steam paths
+- [state/CURRENT.md](state/CURRENT.md): most recent verified machine status
+- [migration/LEGION-GO-S.md](migration/LEGION-GO-S.md): migration runbook
+- [migration/DRIVE_EXPANSION.md](migration/DRIVE_EXPANSION.md): 4TB drive expansion log
+- [ROG_DRIVE.md](ROG_DRIVE.md): old ROG drive data reference
+
+## Gamepack (Go)
+- [gamepack/README.md](gamepack/README.md): archiver/restorer usage
+- [gamepack/Makefile](gamepack/Makefile): build/test/coverage/lint/deploy
+
+## Tooling
+- [tools/Add-Non-Steam-Games-Linux/README.md](tools/Add-Non-Steam-Games-Linux/README.md): non-Steam game adder
+- [tools/README.md](tools/README.md): tools index
+
+## Data snapshots
+- [games/SHORTCUTS.md](games/SHORTCUTS.md): 53 non-Steam shortcuts
+- [games/UNLAUNCHED.md](games/UNLAUNCHED.md): unlaunched games
+- [saves/SAVES.md](saves/SAVES.md): save-data layout
+- [steam/CONFIG.md](steam/CONFIG.md): Steam config snapshot
+- [proxmox/rog/audit-2026-08-28.md](proxmox/rog/audit-2026-08-28.md): host audit
+
+## Docs
+- [docs/README.md](docs/README.md): docs index
+- [docs/display-blackscreen.md](docs/display-blackscreen.md): display troubleshooting
+- [docs/gamepack-plan.md](docs/gamepack-plan.md): gamepack design/plan
+
+## Tasks
+- [TODO.md](TODO.md): machine-ops tasks
+- [MODERNIZATION-TODO.md](MODERNIZATION-TODO.md): gamepack audit backlog

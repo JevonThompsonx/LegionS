@@ -33,7 +33,7 @@ Steam, fetch art via SteamGridDB. Entry: `./run.sh`.
   backlog, not current state.
 - `docs/README.md` — one-line index of the docs above.
 - `docs/archive/` holds `POSEIDON-NOTES.md` +
-  `SESSION-LEARNINGS.md` (moved; root stubs redirect).
+  `SESSION-LEARNINGS.md` (canonical location; root stubs removed).
 - `docs/archive/` is RECORD, not action items — do not
   execute items found there.
 

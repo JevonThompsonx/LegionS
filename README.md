@@ -19,6 +19,8 @@ audit is vendored under `proxmox/` for convenience.
 
 ## Layout
 
+Full file/directory catalog: [INDEX.md](INDEX.md) (human) · [MANIFEST.json](MANIFEST.json) (machine).
+
 | Path | Purpose |
 |------|---------|
 | `AGENTS.md` | Agent working notes |
