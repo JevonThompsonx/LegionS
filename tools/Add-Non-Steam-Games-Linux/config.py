@@ -1,0 +1,499 @@
+from __future__ import annotations
+
+import os
+import re
+import stat as _stat
+from pathlib import Path
+
+
+def load_local_env() -> dict[str, str]:
+    env_path = Path(__file__).resolve().with_name(".env")
+    if not env_path.exists():
+        return {}
+
+    if env_path.stat().st_mode & _stat.S_IROTH:
+        raise PermissionError(f"{env_path} is world-readable; chmod 600 to protect API key")
+
+    values: dict[str, str] = {}
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        values[key.strip()] = value.strip().strip('"').strip("'")
+    return values
+
+
+def get_env_value(*names: str) -> str | None:
+    local_env = load_local_env()
+    for name in names:
+        value = os.environ.get(name)
+        if value:
+            return value.strip()
+        value = local_env.get(name)
+        if value:
+            return value.strip()
+    return None
+
+
+def _parse_scan_dirs(value: str | None) -> list[Path]:
+    """Parse a colon- or comma-separated list of directories to scan."""
+    if not value:
+        return []
+
+    dirs: list[Path] = []
+    seen: set[str] = set()
+    for raw_part in re.split(r"[;:,]", value):
+        part = raw_part.strip().strip('"').strip("'")
+        if not part:
+            continue
+        path = Path(part).expanduser()
+        identity = str(path)
+        if identity in seen:
+            continue
+        seen.add(identity)
+        dirs.append(path)
+    return dirs
+
+
+MIN_PYTHON = (3, 10)
+LOG_FILE_NAME = "steam-game-manager.log"
+
+# Linux Steam install locations (checked in order)
+DEFAULT_STEAM_PATHS = [
+    Path.home() / ".local" / "share" / "Steam",
+    Path.home() / ".steam" / "steam",
+    Path.home() / ".steam" / "debian-installation",
+    Path("/usr/share/steam"),
+    Path("/usr/games/steam"),
+]
+
+# Flatpak Steam
+FLATPAK_STEAM_PATH = Path.home() / ".var" / "app" / "com.valvesoftware.Steam" / ".local" / "share" / "Steam"
+
+# Known game directories on this CachyOS system
+HOME = Path.home()
+KNOWN_GAME_DIRS = [
+    HOME / "Games",
+    HOME / ".local" / "share" / "lutris" / "games",
+    HOME / "snap" / "steam" / "common" / ".local" / "share" / "Steam" / "steamapps" / "common",
+    Path("/mnt/games"),
+    Path("/opt/games"),
+    Path("/opt/GOG Games"),
+]
+
+# Additional scan paths from env
+_extra_scan_dirs = _parse_scan_dirs(get_env_value("SCAN_DIRS", "GAME_SCAN_DIRS"))
+if _extra_scan_dirs:
+    KNOWN_GAME_DIRS = _extra_scan_dirs + KNOWN_GAME_DIRS
+
+SYSTEM_SKIP_DIRS = {
+    "bin",
+    "boot",
+    "dev",
+    "etc",
+    "lib",
+    "lib32",
+    "lib64",
+    "lost+found",
+    "mnt",
+    "proc",
+    "root",
+    "run",
+    "sbin",
+    "srv",
+    "sys",
+    "tmp",
+    "usr",
+    "var",
+}
+
+# Directories inside game folders to skip when scanning for executables
+SKIP_DIRS = {
+    "_commonredist",
+    "_emulators",
+    "__installer",
+    "__support",
+    "_redist",
+    "artbookost",
+    "directx",
+    "dotnet",
+    "easyanticheat",
+    "emu",
+    "md5",
+    "nodvd",
+    "plugins",
+    "prerequisites",
+    "redist",
+    "soundtrack",
+    "streamingassets",
+    "support",
+    "tools",
+    "vcredist",
+    ".git",
+    ".github",
+    "node_modules",
+    "__pycache__",
+    "add-non-steam-games-linux",   # skip this tool's own directory if inside ~/Games
+}
+
+# Executable stems/names to skip (Linux: no .exe, just stem)
+SKIP_EXE_STEMS = {
+    "cemu",
+    "citron",
+    "dolphin",
+    "eden",
+    "ryujinx",
+    "sudachi",
+    "install",
+    "uninstall",
+    "setup",
+    "crashreporter",
+    "bugreporter",
+    "updater",
+    "patcher",
+    "update",
+    "configure",
+    "config",        # catches config.exe (e.g. Ys I/II GOG releases)
+    "python",
+    "python3",
+    "bash",
+    "sh",
+    "zsh",
+    "fish",
+}
+# Windows/Wine system executables inside Proton/Wine prefixes (never games)
+WINE_SYSTEM_EXE_STEMS = {
+    "iexplore",
+    "wmplayer",
+    "winebrowser",
+    "winhelp",
+    "start",          # start.exe in Wine command dir
+    "notepad",
+    "write",
+    "mspaint",
+    "calc",
+    "cmd",
+    "powershell",
+    "powershell_ise",
+    "regedit",
+    "regedt32",
+    "taskmgr",
+    "control",
+    "explorer",
+    "systeminfo",
+    "winver",
+    "dxdiag",
+    "msconfig",
+    "msinfo32",
+    "osk",
+    "snippingtool",
+    "magnify",
+    "narrator",
+    "stikynot",
+    "utilman",
+    "msiexec",
+    "rundll32",
+    "dllhost",
+    "conhost",
+    "svchost",
+    "lsass",
+    "services",
+    "spoolsv",
+    "ctfmon",
+    "sihost",
+    "taskhostw",
+    "runtimebroker",
+    "fontdrvhost",
+    "smss",
+    "csrss",
+    "wininit",
+    "winlogon",
+    "logonui",
+    "werfault",
+    "winhlp32",
+    "rundll",
+    "rundll32",
+    "msbuild",
+    "hh",
+}
+
+# Overlay/injector/trainer directory names (inside game dirs, not the game itself)
+OVERLAY_DIR_NAMES = {
+    "__overlay",
+    "_overlay",
+    "overlay",
+    "trainer",
+    "cheat",
+    "hooks",
+    "injector",
+    "crack",
+    "emu",
+    "goldberg",
+    "steamemu",
+    "creamapi",
+}
+
+# Engine data file stems (false positives: extensionless data files in game engines)
+ENGINE_DATA_FILE_STEMS = {
+    "unity default resources",
+    "unity_builtin_extra",
+    "globalgamemanagers",
+    "globalgamemanagers.assets",
+    "resources",
+    "sharedassets",
+    "boot.config",
+    "maindata",
+    "datareader",
+    "il2cpp",
+    "gamemanagers",
+}
+
+
+
+# Glob patterns for executable filenames to skip
+SKIP_EXE_PATTERNS: set[str] = {
+    "unins*",
+    "install*",
+    "uninstall*",
+    "setup*",
+    "crash*",
+    "bug_reporter*",
+    "update*",
+    "patcher*",
+}
+
+SKIP_CANDIDATE_APP_NAMES = {
+    "game",
+    "launcher",
+    "ldc",
+    "ls",
+    "emu",
+    "tool",
+    "bin",
+    "codex",
+    "redist",
+    "steam",
+    "proton",
+    "wine",
+    "x64",
+    "x86",
+    "start",
+    "run",
+    "app",
+}
+
+SKIP_PATH_KEYWORDS = {
+    "artbook",
+    "advguide",
+    "audiobook",
+    "audiobooktransfer",
+    "custom_music",
+    "easyanticheat",
+    "emu",
+    "emulator",
+    "essentia",
+    "goldberg",
+    "md5",
+    "nodvd",
+    "plugin",
+    "qbit",
+    "redist",
+    "soundtrack",
+    "streamingassets",
+    "tool",
+}
+
+GENERIC_CONTAINER_DIRS = {
+    "app",
+    "bin",
+    "binaries",
+    "game",
+    "games",
+    "x64",
+    "x86",
+    "linux",
+    "linux64",
+    "linux32",
+    "win64",
+    "win32",
+    "win_x64",
+    "win_x86",
+    "windows",
+    "macos",
+    "osx",
+    "data",
+    "content",
+}
+
+GAME_HINT_FILES = {
+    "gameinfo.txt",
+    "libsteam_api.so",
+    "steam_api.so",
+    "UnityPlayer.so",
+    "UnityPlayer.dll",   # Windows Unity games running via Proton
+    "libunity.so",
+    "game.pck",    # Godot games
+    "data.pck",    # Godot games
+}
+
+GAME_HINT_FILES_LOWER = {h.lower() for h in GAME_HINT_FILES}
+
+GAME_HINT_PREFIXES = (
+    "ue4-",
+    "ue5-",
+)
+
+MAX_SCAN_DEPTH = 4
+MAX_EXECUTABLE_SCAN_DEPTH = 5
+
+API_KEY_ENV_NAMES = ("STEAMGRIDDB_API_KEY",)
+
+ARTWORK_REQUEST_DELAY_SECONDS = 0.5
+ARTWORK_MAX_RETRIES = 3
+
+# Preferred artwork styles, tried in order (first non-empty result wins)
+ARTWORK_STYLE_PREFERENCE = ("official", "alternate")
+
+ARTWORK_REQUESTS = {
+    "portrait": {
+        "endpoint": "/grids/game/{game_id}",
+        "params": {
+            "dimensions": "600x900",
+            "styles": "official",
+            "types": "static",
+            "nsfw": "false",
+        },
+        "filename": "{appid}p{ext}",
+    },
+    "horizontal": {
+        "endpoint": "/grids/game/{game_id}",
+        "params": {
+            "dimensions": "920x430",
+            "styles": "official",
+            "types": "static",
+            "nsfw": "false",
+        },
+        "filename": "{appid}.{ext}",
+    },
+    "hero": {
+        "endpoint": "/heroes/game/{game_id}",
+        "params": {
+            "types": "static",
+            "nsfw": "false",
+        },
+        "filename": "{appid}_hero{ext}",
+    },
+    "logo": {
+        "endpoint": "/logos/game/{game_id}",
+        "params": {
+            "types": "static",
+            "nsfw": "false",
+            "mimes": "image/png",
+        },
+        "filename": "{appid}_logo{ext}",
+    },
+    "icon": {
+        "endpoint": "/icons/game/{game_id}",
+        "params": {
+            "types": "static",
+            "nsfw": "false",
+        },
+        "filename": "{appid}_icon{ext}",
+    },
+}
+
+# Absolute-path system root parts that are never meaningful game identifiers
+# (pollute search terms when a game lives under a mount such as
+# /run/media/system/Games_Data/<Game>/<exe>)
+SYSTEM_PATH_PARTS = {
+    "run",
+    "media",
+    "system",
+    "games_data",
+    "t",
+    "home",
+    "var",
+    "usr",
+    "mnt",
+    "opt",
+    "bin",
+    "sbin",
+    "boot",
+    "dev",
+    "etc",
+    "lib",
+    "lib64",
+    "proc",
+    "root",
+    "srv",
+    "sys",
+    "tmp",
+    "data",
+    "storage",
+}
+
+# Shortcut names / exe markers for tools, emulators and AppImages that must not
+# get artwork, renames or grid files.
+TOOL_OR_EMULATOR_NAMES = {
+    "Ascendara.AppImage",
+    "Linux-Yuzu",
+    "Eden-Linux",
+    "Switch Citron",
+}
+
+TOOL_OR_EMULATOR_EXE_SUFFIXES = {
+    ".appimage",
+}
+
+TOOL_OR_EMULATOR_EXE_PARTS = {
+    "ascendara",
+    "citron",
+    "eden",
+    "dolphin",
+    "ryujinx",
+    "sudachi",
+    "cemu",
+    "suyu",
+    "yuzu",
+}
+
+DUMMY_SHORTCUT_NAME = "Steam Game Manager Validation"
+# On Linux, point to a real executable that always exists
+DUMMY_SHORTCUT_EXE = "/usr/bin/env"
+
+REQUIRED_SHORTCUT_DEFAULTS = {
+    "ShortcutPath": "",
+    "LaunchOptions": "",
+    "IsHidden": 0,
+    "AllowDesktopConfig": 1,
+    "AllowOverlay": 1,
+    "OpenVR": 0,
+    "Devkit": 0,
+    "DevkitGameID": "",
+    "DevkitOverrideAppID": 0,
+    "LastPlayTime": 0,
+    "FlatpakAppID": "",
+}
+
+KNOWN_SHORTCUT_FIELDS = {
+    "appid",
+    "AppName",
+    "StartDir",
+    "icon",
+    "ShortcutPath",
+    "LaunchOptions",
+    "IsHidden",
+    "AllowDesktopConfig",
+    "AllowOverlay",
+    "Exe",
+    "OpenVR",
+    "openvr",
+    "sortas",
+    "Devkit",
+    "DevkitGameID",
+    "DevkitOverrideAppID",
+    "LastPlayTime",
+    "FlatpakAppID",
+    "tags",
+}

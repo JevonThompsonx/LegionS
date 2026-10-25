@@ -1,0 +1,47 @@
+     Static hostname: bazzite-mobile
+           Icon name: computer-tablet
+             Chassis: tablet 具
+   Chassis Asset Tag: No Asset Tag
+          Machine ID: e02bf238630c43a1816034c141f73e8d
+             Boot ID: 0763940bb36f47ff968a2d983e21efe7
+    Operating System: Bazzite
+         CPE OS Name: cpe:/o:universal-blue:bazzite:44
+      OS Support End: Wed 2027-05-19
+OS Support Remaining: 8month 2w 5d
+            OS Image: bazzite-deck-gnome-44.20260820
+              Kernel: Linux 7.2.0-ogc4.1.fc44.x86_64
+        Architecture: x86-64
+     Hardware Vendor: ASUSTeK COMPUTER INC.
+      Hardware Model: ROG Ally RC71L_RC71L
+    Hardware Version: 1.0
+    Firmware Version: RC71L.342
+       Firmware Date: Tue 2025-02-11
+        Firmware Age: 1y 6month 2w 2d
+---UNAME---
+Linux bazzite-mobile 7.2.0-ogc4.1.fc44.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Aug 20 16:15:37 UTC 2026 x86_64 GNU/Linux
+---UPTIME---
+ 17:19:48 up 2 min,  2 users,  load average: 3.00, 1.37, 0.53
+---LSB---
+NAME="Bazzite"
+VERSION="44.20260820.0 (Silverblue)"
+RELEASE_TYPE=stable
+ID=bazzite
+ID_LIKE="fedora"
+VERSION_ID=44
+VERSION_CODENAME="Silverblue"
+PRETTY_NAME="Bazzite"
+ANSI_COLOR="0;38;2;138;43;226"
+LOGO=bazzite-logo
+CPE_NAME="cpe:/o:universal-blue:bazzite:44"
+DEFAULT_HOSTNAME="bazzite"
+HOME_URL="https://bazzite.gg"
+DOCUMENTATION_URL="https://docs.bazzite.gg"
+SUPPORT_URL="https://discord.bazzite.gg"
+BUG_REPORT_URL="https://github.com/ublue-os/bazzite/issues/"
+SUPPORT_END=2027-05-19
+VARIANT="Silverblue"
+VARIANT_ID=bazzite-deck-gnome
+OSTREE_VERSION='44.20260820.0'
+BUILD_ID="Stable (F44.20260820)"
+BOOTLOADER_NAME="Bazzite Stable (F44.20260820)"
+IMAGE_ID="bazzite-deck-gnome-44.20260820"

@@ -1,0 +1,6 @@
+# compiled binary
+/gamepack
+
+# test artifacts
+*.test
+coverage.out

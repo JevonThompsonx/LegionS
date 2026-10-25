@@ -1,0 +1,42 @@
+  UNIT                                            LOAD   ACTIVE SUB     DESCRIPTION
+  achievement-hub.service                         loaded active running Achievement Hub - unified achievement tracker (user service)
+  at-spi-dbus-bus.service                         loaded active running Accessibility services bus
+  cecd.service                                    loaded active running Consumer Electronics Control (CEC) Daemon
+  dbus-:1.100-org.a11y.atspi.Registry@0.service   loaded active running dbus-:1.100-org.a11y.atspi.Registry@0.service
+  dbus-:1.2-org.freedesktop.portal.IBus@0.service loaded active running dbus-:1.2-org.freedesktop.portal.IBus@0.service
+  dbus-broker.service                             loaded active running D-Bus User Message Bus
+  dmemcg-booster-user.service                     loaded active running Service for enabling and controlling dmem cgroup limits for boosting foreground games, user-level
+  gamemode-news-hook.service                      loaded active running Steam Game Mode news card replacement hook
+  gamescope-session-plus@ogui-steam.service       loaded active running Gamescope Session Plus
+  gvfs-daemon.service                             loaded active running Virtual filesystem service
+  mpris-proxy.service                             loaded active running Bluetooth mpris proxy
+  ntfs-nag.service                                loaded active running NTFS/exFAT Monitor notification service
+● orca.service                                    loaded failed failed  Orca Screen Reader
+  pipewire-pulse.service                          loaded active running PipeWire PulseAudio
+  pipewire.service                                loaded active running PipeWire Multimedia Service
+  speech-dispatcher.service                       loaded active running Common interface to speech synthesizers
+  steamos-manager.service                         loaded active running SteamOS Manager Daemon
+  steamos-powerbuttond.service                    loaded active running Power Button daemon for SteamOS
+  syncthing.service                               loaded active running Syncthing - Open Source Continuous File Synchronization
+  systemd-tmpfiles-setup.service                  loaded active exited  Create User Files and Directories
+  uresourced.service                              loaded active running User resource assignment daemon
+  wireplumber.service                             loaded active running Multimedia Service Session Manager
+  xdg-desktop-portal.service                      loaded active running Portal service
+  xdg-document-portal.service                     loaded active running flatpak document portal service
+  xdg-permission-store.service                    loaded active running sandboxed app permission store
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+25 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.
+---USER-TIMERS---
+NEXT                           LEFT LAST                         PASSED UNIT                         ACTIVATES
+Fri 2026-08-28 17:22:18 PDT 2min 8s -                                 - systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+Fri 2026-08-28 17:27:10 PDT    7min Thu 2026-08-27 19:50:34 PDT       - ludusavi-backup.timer        ludusavi-backup.service
+Fri 2026-08-28 17:29:59 PDT    9min Fri 2026-08-28 17:19:30 PDT 39s ago smart-save-checker.timer     smart-save-checker.service
+-                                 - Fri 2026-08-28 17:19:30 PDT 39s ago grub-boot-success.timer      grub-boot-success.service
+
+4 timers listed.
+Pass --all to see loaded but inactive timers, too.

@@ -1,0 +1,1 @@
+Failed to open lock file "/var/lib/dnf/system-repo.lock": (13) - Permission denied

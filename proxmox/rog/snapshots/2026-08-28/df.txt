@@ -1,0 +1,33 @@
+Filesystem      Size  Used Avail Use% Mounted on
+composefs        39M   39M     0 100% /
+/dev/nvme0n1p4  198G   48G  148G  25% /etc
+devtmpfs        3.6G     0  3.6G   0% /dev
+tmpfs           3.8G  316M  3.5G   9% /dev/shm
+efivarfs        128K   51K   73K  42% /sys/firmware/efi/efivars
+tmpfs           1.5G  2.4M  1.5G   1% /run
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+tmpfs           3.8G   13M  3.8G   1% /tmp
+/dev/nvme0n1p4  198G   48G  148G  25% /var
+/dev/nvme0n1p4  198G   48G  148G  25% /var/home
+/dev/nvme0n1p3  2.0G  519M  1.3G  29% /boot
+/dev/nvme0n1p2  599M   46M  554M   8% /boot/efi
+tmpfs           762M  4.1M  758M   1% /run/user/1000
+/dev/nvme0n1p1  3.5T  2.4T 1019G  70% /run/media/system/Games_Data
+---DF-INODE---
+Filesystem        Inodes  IUsed                IFree IUse% Mounted on
+composefs              -      - 18446744073709306340     - /
+/dev/nvme0n1p4         0      0                    0     - /etc
+devtmpfs          928343    847               927496    1% /dev
+tmpfs             975213    161               975052    1% /dev/shm
+efivarfs               0      0                    0     - /sys/firmware/efi/efivars
+tmpfs             819200   1746               817454    1% /run
+none                1024      2                 1022    1% /run/credentials/systemd-journald.service
+none                1024      2                 1022    1% /run/credentials/systemd-resolved.service
+tmpfs            1048576     79              1048497    1% /tmp
+/dev/nvme0n1p4         0      0                    0     - /var
+/dev/nvme0n1p4         0      0                    0     - /var/home
+/dev/nvme0n1p3    131072     34               131038    1% /boot
+/dev/nvme0n1p2         0      0                    0     - /boot/efi
+tmpfs             195042    131               194911    1% /run/user/1000
+/dev/nvme0n1p1 236847104 659582            236187522    1% /run/media/system/Games_Data

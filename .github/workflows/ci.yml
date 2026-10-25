@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: test / vet / gofmt / coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: gamepack/go.mod
+          check-latest: true
+
+      - name: Download modules
+        working-directory: gamepack
+        run: go mod download
+
+      - name: go vet
+        run: go vet ./gamepack/...
+
+      - name: gofmt
+        # Fail if any Go file in the module is not formatted.
+        run: |
+          test -z "$(gofmt -l gamepack)" || {
+            echo "These files are not gofmt-clean:"
+            gofmt -l gamepack
+            exit 1
+          }
+
+      - name: go test (race + coverage)
+        run: go test ./gamepack/... -race -coverprofile=coverage.out -covermode=atomic
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage.out
+          if-no-files-found: error
+
+      - name: Coverage gate (>= 40% on gated packages)
+        run: bash gamepack/scripts/coverage-check.sh

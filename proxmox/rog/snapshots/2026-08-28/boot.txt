@@ -1,0 +1,13 @@
+BOOT_IMAGE=(hd0,gpt3)/ostree/default-23df82cc179e36556e29756a98bd40626ada1fcc8fc87b4b967b0b9624b2423c/vmlinuz-7.2.0-ogc4.1.fc44.x86_64 ostree=/ostree/boot.1/default/23df82cc179e36556e29756a98bd40626ada1fcc8fc87b4b967b0b9624b2423c/0 rhgb quiet root=UUID=6b91a72a-a9fc-4c00-acbe-cf2229a903e0 vconsole.keymap=us rootflags=subvol=root rw amd_iommu=off bluetooth.disable_ertm=1 amdgpu.ppfeaturemask=0xfff7ffff
+---CMDLINE---
+total 44
+drwxr-xr-x.  7 root root  4096 Aug 24 17:33 .
+dr-xr-xr-x. 12 root root  4096 Dec 31  1969 ..
+lrwxrwxrwx.  1 root root     1 Jun 17 16:59 boot -> .
+-rw-r--r--.  1 root root  3344 Aug 22 16:57 bootupd-state.json
+drwx------.  3 root root  4096 Dec 31  1969 efi
+drwx------.  2 root root  4096 Jun 17 17:02 grub2
+lrwxrwxrwx.  1 root root     8 Aug 24 17:33 loader -> loader.1
+drwxr-xr-x.  3 root root  4096 Aug 24 17:33 loader.1
+drwx------.  2 root root 16384 Jun 17 16:51 lost+found
+drwxr-xr-x.  4 root root  4096 Aug 23 14:41 ostree

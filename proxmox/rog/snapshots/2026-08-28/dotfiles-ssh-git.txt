@@ -1,0 +1,10 @@
+ls: cannot access '/home/jevonx/.ssh/': No such file or directory
+---SSH-CONFIG---
+cat: /home/jevonx/.ssh/config: No such file or directory
+---GITCONFIG---
+[http]
+	lowSpeedLimit = 1000
+	lowSpeedTime = 60
+	postBuffer = 524288000
+---FISH---
+cat: /home/jevonx/.config/fish/config.fish: No such file or directory

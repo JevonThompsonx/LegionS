@@ -1,0 +1,2 @@
+cat: /home/jevonx/seafile-watchdog.sh: No such file or directory
+---SEAFILE-PKG---

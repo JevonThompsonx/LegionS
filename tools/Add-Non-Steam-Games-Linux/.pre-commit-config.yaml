@@ -1,0 +1,22 @@
+# Pre-commit hooks for Add-Non-Steam-Games-Linux
+#
+# Install:  pip install pre-commit && pre-commit install
+# Run all:  pre-commit run --all-files
+repos:
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+        # POSIX-ish bash; allow sourced files and follow 'source' directives
+        args: ["--shell=bash", "--external-sources"]
+        types: [shell]
+        files: \.sh$
+
+  - repo: local
+    hooks:
+      - id: shellcheck-local
+        name: shellcheck (run.sh)
+        entry: shellcheck --shell=bash --external-sources
+        language: system
+        types: [shell]
+        files: \.sh$

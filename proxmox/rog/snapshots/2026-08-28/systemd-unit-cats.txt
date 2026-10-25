@@ -1,0 +1,498 @@
+=== /home/jevonx/.config/systemd/user/achievement-hub.service ===
+[Unit]
+Description=Achievement Hub - unified achievement tracker (user service)
+Documentation=https://github.com/ascendara/ascendara
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/achievement-hub/run-service
+Restart=on-failure
+RestartSec=15
+# Do not endlessly restart on bad config: give up after 5 fast failures
+StartLimitIntervalSec=300
+StartLimitBurst=5
+# Light resource posture
+Nice=10
+CPUWeight=20
+MemoryMax=150M
+
+[Install]
+WantedBy=default.target
+
+=== /home/jevonx/.config/systemd/user/link-game-saves.service ===
+[Unit]
+Description=Auto-link game saves to Proton prefixes
+
+[Service]
+Type=oneshot
+ExecStart=/var/home/jevonx/GameSaves/link-game-saves.sh
+
+=== /home/jevonx/.config/systemd/user/ludusavi-backup.service ===
+[Unit]
+Description=Ludusavi game-save backup (via existing wrapper)
+
+[Service]
+Type=oneshot
+# Reuses the PROVEN wrapper (ran hourly May→Jun 17): timestamped log lines +
+# `flatpak run com.github.mtkennerly.ludusavi backup --force`
+ExecStart=/var/home/jevonx/GameSaves/ludusavi-backup/backup.sh
+# Flatpak from a user service sometimes lacks the session bus bits:
+Environment=GDK_BACKEND=x11
+SuccessExitStatus=0
+
+[Timer]
+Unit=ludusavi-backup.service
+OnBootSec=10min
+OnUnitActiveSec=1h
+RandomizedDelaySec=120
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+=== /home/jevonx/.config/systemd/user/smart-save-checker.service ===
+[Unit]
+Description=Smart Save Checker — protect saves from empty overwrite
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/smart-save-checker-wrapper.sh
+Nice=10
+IOSchedulingClass=idle
+[Install]
+WantedBy=default.target
+
+=== /home/jevonx/.config/systemd/user/syncthing.service ===
+[Unit]
+Description=Syncthing - Open Source Continuous File Synchronization
+Documentation=man:syncthing(1)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/syncthing serve --no-browser --no-restart --logflags=0
+ExecReload=/usr/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=10
+SuccessExitStatus=3 4
+RestartForceExitStatus=3 4
+
+[Install]
+WantedBy=default.target
+
+=== /etc/systemd/system/dbus-org.bluez.service ===
+[Unit]
+Description=Bluetooth service
+Documentation=man:bluetoothd(8)
+ConditionPathIsDirectory=/sys/class/bluetooth
+
+[Service]
+Type=dbus
+BusName=org.bluez
+ExecStart=/usr/libexec/bluetooth/bluetoothd
+NotifyAccess=main
+#WatchdogSec=10
+#Restart=on-failure
+CapabilityBoundingSet=CAP_NET_RAW CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+LimitNPROC=1
+
+# Filesystem lockdown
+ProtectHome=true
+ProtectSystem=strict
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+StateDirectory=bluetooth
+StateDirectoryMode=0700
+ConfigurationDirectory=bluetooth
+ConfigurationDirectoryMode=0555
+
+# Execute Mappings
+MemoryDenyWriteExecute=true
+
+# Privilege escalation
+NoNewPrivileges=true
+
+# Real-time
+RestrictRealtime=true
+
+[Install]
+WantedBy=bluetooth.target
+Alias=dbus-org.bluez.service
+
+=== /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service ===
+[Unit]
+Description=firewalld - dynamic firewall daemon
+Before=network-pre.target
+Wants=network-pre.target
+# Use PartOf so firewalld is restarted when dbus is restarted. But it doesn't
+# have to wait on it initially.
+PartOf=dbus.service
+Conflicts=iptables.service ip6tables.service ebtables.service ipset.service
+Documentation=man:firewalld(1)
+
+[Service]
+EnvironmentFile=-/etc/sysconfig/firewalld
+ExecStart=/usr/bin/firewalld --nofork --nopid $FIREWALLD_ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+StandardOutput=null
+StandardError=null
+KillMode=mixed
+DevicePolicy=closed
+KeyringMode=private
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+PrivateDevices=yes
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHome=tmpfs
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=no
+ProtectKernelTunables=no
+ProtectSystem=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-org.fedoraproject.FirewallD1.service
+
+=== /etc/systemd/system/dbus-org.freedesktop.Avahi.service ===
+# This file is part of avahi.
+#
+# avahi is free software; you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# avahi is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public
+# License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with avahi; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+# USA.
+
+[Unit]
+Description=Avahi mDNS/DNS-SD Stack
+Requires=avahi-daemon.socket
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.Avahi
+ExecStart=/usr/bin/avahi-daemon -s
+ExecReload=/usr/bin/avahi-daemon -r
+NotifyAccess=main
+
+[Install]
+WantedBy=multi-user.target
+Also=avahi-daemon.socket
+Alias=dbus-org.freedesktop.Avahi.service
+
+=== /etc/systemd/system/dbus-org.freedesktop.home1.service ===
+#  SPDX-License-Identifier: LGPL-2.1-or-later
+#
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+[Unit]
+Description=Home Area Manager
+Documentation=man:systemd-homed.service(8)
+Documentation=man:org.freedesktop.home1(5)
+After=home.mount dbus.service
+
+[Service]
+BusName=org.freedesktop.home1
+CapabilityBoundingSet=CAP_SYS_ADMIN CAP_CHOWN CAP_DAC_OVERRIDE CAP_FOWNER CAP_FSETID CAP_SETGID CAP_SETUID CAP_SYS_RESOURCE CAP_SETPCAP CAP_DAC_READ_SEARCH CAP_SETFCAP
+DeviceAllow=/dev/loop-control rw
+DeviceAllow=/dev/mapper/control rw
+DeviceAllow=/dev/btrfs-control rw
+DeviceAllow=block-* rw
+DeviceAllow=char-hidraw rw
+ExecStart=/usr/lib/systemd/systemd-homed
+KillMode=mixed
+LimitNOFILE=524288
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictAddressFamilies=AF_UNIX AF_NETLINK AF_ALG AF_INET AF_INET6
+RestrictNamespaces=mnt user
+RestrictRealtime=yes
+StateDirectory=systemd/home
+CacheDirectory=systemd/home
+SystemCallArchitectures=native
+SystemCallErrorNumber=EPERM
+SystemCallFilter=@system-service @mount quotactl quotactl_fd
+TimeoutStopSec=3min
+
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-org.freedesktop.home1.service
+Also=systemd-homed-activate.service
+
+=== /etc/systemd/system/dbus-org.freedesktop.ModemManager1.service ===
+[Unit]
+Description=Modem Manager
+After=polkit.service
+Requires=polkit.service
+ConditionVirtualization=!container
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.ModemManager1
+ExecStart=/usr/bin/ModemManager
+StandardError=null
+Restart=on-abort
+CapabilityBoundingSet=CAP_SYS_ADMIN CAP_NET_ADMIN
+ProtectSystem=true
+ProtectHome=true
+PrivateTmp=true
+RestrictAddressFamilies=AF_NETLINK AF_UNIX AF_QIPCRTR
+NoNewPrivileges=true
+User=root
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-org.freedesktop.ModemManager1.service
+
+=== /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service ===
+[Unit]
+Description=Network Manager Script Dispatcher Service
+Documentation=man:NetworkManager-dispatcher.service(8)
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.nm_dispatcher
+ExecStart=/usr/libexec/nm-dispatcher
+NotifyAccess=main
+
+# Enable debug logging in dispatcher service. Note that dispatcher
+# also honors debug logging requests from NetworkManager, so you
+# can also control logging requests with
+# `nmcli general logging domain DISPATCHER level TRACE`.
+#Environment=NM_DISPATCHER_DEBUG_LOG=1
+
+# We want to allow scripts to spawn long-running daemons, so tell
+# systemd to not clean up when nm-dispatcher exits
+KillMode=process
+
+[Install]
+Alias=dbus-org.freedesktop.nm-dispatcher.service
+
+
+=== /etc/systemd/system/dbus-org.freedesktop.oom1.service ===
+#  SPDX-License-Identifier: LGPL-2.1-or-later
+#
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+[Unit]
+Description=Userspace Out-Of-Memory (OOM) Killer
+Documentation=man:systemd-oomd.service(8)
+Documentation=man:org.freedesktop.oom1(5)
+DefaultDependencies=no
+After=swap.target
+Before=multi-user.target shutdown.target
+Conflicts=shutdown.target
+ConditionControlGroupController=memory
+ConditionPathExists=/proc/pressure/cpu
+ConditionPathExists=/proc/pressure/io
+ConditionPathExists=/proc/pressure/memory
+Requires=systemd-oomd.socket
+After=systemd-sysusers.service
+
+[Service]
+AmbientCapabilities=CAP_KILL CAP_DAC_OVERRIDE
+BusName=org.freedesktop.oom1
+CapabilityBoundingSet=CAP_KILL CAP_DAC_OVERRIDE
+ExecStart=/usr/lib/systemd/systemd-oomd
+IPAddressDeny=any
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+# Reserve some minimum amount of memory so that systemd-oomd can continue to
+# run in resource starved scenarios.
+MemoryMin=64M
+MemoryLow=64M
+NoNewPrivileges=yes
+OOMScoreAdjust=-900
+PrivateDevices=yes
+PrivateTmp=disconnected
+ProtectClock=yes
+ProtectHome=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectSystem=strict
+Restart=on-failure
+RestrictAddressFamilies=AF_UNIX
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallArchitectures=native
+SystemCallErrorNumber=EPERM
+SystemCallFilter=@system-service
+Type=notify-reload
+User=systemd-oom
+
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-org.freedesktop.oom1.service
+Also=systemd-oomd.socket
+
+=== /etc/systemd/system/dbus-org.freedesktop.resolve1.service ===
+#  SPDX-License-Identifier: LGPL-2.1-or-later
+#
+#  This file is part of systemd.
+#
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+
+[Unit]
+Description=Network Name Resolution
+Documentation=man:systemd-resolved.service(8)
+Documentation=man:org.freedesktop.resolve1(5)
+Documentation=https://systemd.io/WRITING_NETWORK_CONFIGURATION_MANAGERS
+Documentation=https://systemd.io/WRITING_RESOLVER_CLIENTS
+
+DefaultDependencies=no
+After=systemd-sysctl.service systemd-sysusers.service
+Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+Conflicts=shutdown.target initrd-switch-root.target
+Wants=nss-lookup.target
+
+[Service]
+AmbientCapabilities=CAP_SETPCAP CAP_NET_RAW CAP_NET_BIND_SERVICE
+BusName=org.freedesktop.resolve1
+CapabilityBoundingSet=CAP_SETPCAP CAP_NET_RAW CAP_NET_BIND_SERVICE
+ExecStart=/usr/lib/systemd/systemd-resolved
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+PrivateDevices=yes
+PrivateTmp=disconnected
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHome=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectSystem=strict
+Restart=always
+RestartSec=0
+RestrictAddressFamilies=AF_UNIX AF_NETLINK AF_INET AF_INET6
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+RuntimeDirectory=systemd/resolve
+RuntimeDirectoryPreserve=yes
+Sockets=systemd-resolved-varlink.socket systemd-resolved-monitor.socket
+SystemCallArchitectures=native
+SystemCallErrorNumber=EPERM
+SystemCallFilter=@system-service
+Type=notify-reload
+User=systemd-resolve
+ImportCredential=network.dns
+ImportCredential=network.search_domains
+
+
+[Install]
+WantedBy=sysinit.target
+Alias=dbus-org.freedesktop.resolve1.service
+Also=systemd-resolved-varlink.socket systemd-resolved-monitor.socket
+
+=== /etc/systemd/system/dbus-org.freedesktop.thermald.service ===
+[Unit]
+Description=Thermal Daemon Service
+ConditionVirtualization=no
+
+[Service]
+Type=dbus
+SuccessExitStatus=2
+BusName=org.freedesktop.thermald
+ExecStart=/usr/bin/thermald --systemd --dbus-enable --adaptive
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=dbus-org.freedesktop.thermald.service
+
+
+=== /etc/systemd/system/dbus.service ===
+[Unit]
+Description=D-Bus System Message Bus
+Documentation=man:dbus-broker-launch(1)
+DefaultDependencies=false
+After=dbus.socket
+Before=basic.target shutdown.target
+Requires=dbus.socket
+Conflicts=shutdown.target
+
+[Service]
+Type=notify-reload
+Sockets=dbus.socket
+OOMScoreAdjust=-900
+LimitNOFILE=16384
+ProtectSystem=full
+PrivateTmp=true
+PrivateDevices=true
+ExecStart=/usr/bin/dbus-broker-launch --scope system --audit
+
+[Install]
+Alias=dbus.service
+
+=== /etc/systemd/system/display-manager.service ===
+[Unit]
+Description=Simple Desktop Display Manager
+Documentation=man:sddm(1) man:sddm.conf(5)
+Conflicts=getty@tty1.service
+After=systemd-user-sessions.service getty@tty1.service plymouth-quit.service systemd-logind.service
+PartOf=graphical.target
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+[Service]
+ExecStart=/usr/bin/sddm
+Restart=always
+EnvironmentFile=-/etc/sysconfig/sddm
+
+[Install]
+Alias=display-manager.service
+
+
+=== /etc/systemd/system/org.freedesktop.intel_lpmd.service ===
+[Unit]
+Description= Intel Linux Energy Optimizer (lpmd) Service
+Documentation=man:intel_lpmd(8)
+ConditionVirtualization=no
+StartLimitInterval=200
+StartLimitBurst=5
+
+[Service]
+Type=dbus
+SuccessExitStatus=2
+BusName=org.freedesktop.intel_lpmd
+ExecStart=/usr/bin/intel_lpmd --systemd --dbus-enable
+Restart=on-failure
+RestartSec=30
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
+Alias=org.freedesktop.intel_lpmd.service
+

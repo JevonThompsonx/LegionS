@@ -1,0 +1,8 @@
+ls: cannot access '/mnt/media': No such file or directory
+---QBIT---
+ls: cannot access '/mnt/media/qbit': No such file or directory
+ls: cannot access '/home/jevonx/qbit': No such file or directory
+---MEDIA-DF---
+df: /mnt/media: No such file or directory
+---MEDIA-SIZE---
+du: cannot access '/mnt/media/*': No such file or directory

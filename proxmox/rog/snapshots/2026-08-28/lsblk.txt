@@ -1,0 +1,27 @@
+NAME          SIZE FSTYPE LABEL         UUID                                 MOUNTPOINTS
+zram0         3.7G swap   zram0         45f4e5c1-0f59-44c0-9ba1-39cc1199e58e [SWAP]
+nvme0n1       3.7T                                                           
+├─nvme0n1p1   3.5T ext4   Games Data    f3d4f998-421b-49da-aa8e-87c1e2594906 /run/media/system/Games_Data
+├─nvme0n1p2     1G vfat                 313B-603E                            /boot/efi
+├─nvme0n1p3     2G ext4   bazzite_xboot 84c080bf-7435-4ea9-a533-1995825ae94c /boot
+└─nvme0n1p4 197.4G btrfs  bazzite       6b91a72a-a9fc-4c00-acbe-cf2229a903e0 /usr/share/wireplumber
+                                                                             /usr/share/pipewire
+                                                                             /var/home
+                                                                             /var
+                                                                             /sysroot/ostree/deploy/default/var
+                                                                             /sysroot
+                                                                             /etc
+---LSBLK-F---
+NAME        FSTYPE FSVER LABEL         UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+zram0       swap   1     zram0         45f4e5c1-0f59-44c0-9ba1-39cc1199e58e                [SWAP]
+nvme0n1                                                                                    
+├─nvme0n1p1 ext4   1.0   Games Data    f3d4f998-421b-49da-aa8e-87c1e2594906   1018G    66% /run/media/system/Games_Data
+├─nvme0n1p2 vfat   FAT32               313B-603E                             553.7M     8% /boot/efi
+├─nvme0n1p3 ext4   1.0   bazzite_xboot 84c080bf-7435-4ea9-a533-1995825ae94c    1.3G    27% /boot
+└─nvme0n1p4 btrfs        bazzite       6b91a72a-a9fc-4c00-acbe-cf2229a903e0  147.9G    24% /usr/share/wireplumber
+                                                                                           /usr/share/pipewire
+                                                                                           /var/home
+                                                                                           /var
+                                                                                           /sysroot/ostree/deploy/default/var
+                                                                                           /sysroot
+                                                                                           /etc

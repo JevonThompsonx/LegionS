@@ -1,0 +1,3 @@
+cat: /home/jevonx/.config/caddy/dsh-Caddyfile: No such file or directory
+---CADDY-SERVICE---
+cat: /home/jevonx/.config/systemd/user/dsh-caddy.service: No such file or directory

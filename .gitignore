@@ -1,0 +1,28 @@
+# Go build / test artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Compiled binaries (built in-module)
+/gamepack/gamepack
+
+# Coverage output
+coverage.out
+coverage.html
+
+# Go workspace cache state (go.work.sum is tracked when present, .tmp is not)
+go.work.tmp
+
+# Editor / OS noise
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local worktree mounts (outside main tree)
+.worktrees/

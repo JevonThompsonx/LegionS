@@ -1,0 +1,62 @@
+100.119.14.48    rog             rog.tail958f87.ts.net  linux    -                                                        
+100.127.201.94   aphrodite       tagged-devices         linux    active; direct 192.168.67.210:41641, tx 2752 rx 1144     
+100.119.216.62   bazzite-mobile  tagged-devices         linux    offline, last seen 42d ago                               
+100.67.222.127   fedora          tagged-devices         linux    offline, last seen 36d ago                               
+100.90.183.68    ipad-air-10-5   tagged-devices         iOS      offline, last seen 2d ago                                
+100.83.187.120   iphone-15-pro   tagged-devices         iOS      -                                                        
+100.115.52.64    iphone185       tagged-devices         iOS      offline, last seen 74d ago                               
+100.86.195.86    jessmac         tagged-devices         macOS    offline, last seen 175d ago                              
+100.108.184.65   jrockymac       tagged-devices         linux    offline, last seen 36d ago                               
+100.105.100.105  kentucky        tagged-devices         linux    offline, last seen 33d ago                               
+100.86.238.114   penguin         tagged-devices         linux    offline, last seen 36d ago                               
+100.102.155.36   pixel-9a        tagged-devices         android  offline, last seen 60d ago                               
+100.116.138.103  roadman         tagged-devices         linux    active; direct 192.168.67.131:41641, tx 141840 rx 18760  
+100.71.134.54    skellyshome     tagged-devices         linux    offline, last seen 15d ago                               
+100.95.134.16    templetonbak    tagged-devices         linux    active; relay "sfo", tx 705792 rx 331752                 
+
+# Health check:
+#     - SELinux is enabled; Tailscale SSH may not work. See https://tailscale.com/s/ssh-selinux
+---IP---
+100.119.14.48
+fd7a:115c:a1e0::e333:e31
+---NETSTAT---
+Netid State  Recv-Q Send-Q              Local Address:Port  Peer Address:PortProcess                                                               
+udp   UNCONN 0      0                       127.0.0.1:323        0.0.0.0:*                                                                         
+udp   UNCONN 0      0                         0.0.0.0:21027      0.0.0.0:*    users:(("syncthing",pid=2103,fd=21))                                 
+udp   UNCONN 0      0                         0.0.0.0:41641      0.0.0.0:*                                                                         
+udp   UNCONN 0      0                     224.0.0.251:5353       0.0.0.0:*    users:(("steamwebhelper",pid=3691,fd=208))                           
+udp   UNCONN 0      0                     224.0.0.251:5353       0.0.0.0:*    users:(("steamwebhelper",pid=3691,fd=207))                           
+udp   UNCONN 0      0                         0.0.0.0:5353       0.0.0.0:*                                                                         
+udp   UNCONN 0      0                         0.0.0.0:5355       0.0.0.0:*                                                                         
+udp   UNCONN 0      0                         0.0.0.0:27036      0.0.0.0:*    users:(("steam",pid=3216,fd=143))                                    
+udp   UNCONN 0      0                         0.0.0.0:47584      0.0.0.0:*    users:(("Hades.exe",pid=5332,fd=105),("wineserver",pid=5160,fd=1378))
+udp   UNCONN 0      0                         0.0.0.0:52225      0.0.0.0:*    users:(("syncthing",pid=2103,fd=23))                                 
+udp   UNCONN 0      0                      127.0.0.54:53         0.0.0.0:*                                                                         
+udp   UNCONN 0      0                   127.0.0.53%lo:53         0.0.0.0:*                                                                         
+udp   UNCONN 0      0                           [::1]:323           [::]:*                                                                         
+udp   UNCONN 0      0                            [::]:21027         [::]:*    users:(("syncthing",pid=2103,fd=22))                                 
+udp   UNCONN 0      0                            [::]:37504         [::]:*    users:(("syncthing",pid=2103,fd=19))                                 
+udp   UNCONN 0      0                            [::]:41641         [::]:*                                                                         
+udp   UNCONN 0      0                            [::]:5353          [::]:*                                                                         
+udp   UNCONN 0      0                            [::]:5355          [::]:*                                                                         
+udp   UNCONN 0      0                               *:22000            *:*    users:(("syncthing",pid=2103,fd=20))                                 
+tcp   LISTEN 0      4096                    127.0.0.1:8384       0.0.0.0:*    users:(("syncthing",pid=2103,fd=28))                                 
+tcp   LISTEN 0      4096                      0.0.0.0:5355       0.0.0.0:*                                                                         
+tcp   LISTEN 0      4096                100.119.14.48:47845      0.0.0.0:*                                                                         
+tcp   LISTEN 0      128                     127.0.0.1:37513      0.0.0.0:*    users:(("steam",pid=3216,fd=51))                                     
+tcp   LISTEN 0      4096                    127.0.0.1:631        0.0.0.0:*                                                                         
+tcp   LISTEN 0      4096                   127.0.0.54:53         0.0.0.0:*                                                                         
+tcp   LISTEN 0      128                       0.0.0.0:22         0.0.0.0:*                                                                         
+tcp   LISTEN 0      10                      127.0.0.1:58949      0.0.0.0:*                                                                         
+tcp   LISTEN 0      128                     127.0.0.1:27060      0.0.0.0:*    users:(("steam",pid=3216,fd=91))                                     
+tcp   LISTEN 0      4096                127.0.0.53%lo:53         0.0.0.0:*                                                                         
+tcp   LISTEN 0      5                         0.0.0.0:8081       0.0.0.0:*    users:(("socat",pid=1328,fd=5))                                      
+tcp   LISTEN 0      128                     127.0.0.1:39665      0.0.0.0:*    users:(("steam",pid=3216,fd=87))                                     
+tcp   LISTEN 0      128                       0.0.0.0:27036      0.0.0.0:*    users:(("steam",pid=3216,fd=144))                                    
+tcp   LISTEN 0      128                       0.0.0.0:47584      0.0.0.0:*    users:(("wineserver",pid=5160,fd=1388))                              
+tcp   LISTEN 0      128                     127.0.0.1:57343      0.0.0.0:*    users:(("steam",pid=3216,fd=47))                                     
+tcp   LISTEN 0      10                      127.0.0.1:8080       0.0.0.0:*    users:(("steamwebhelper",pid=3691,fd=95))                            
+tcp   LISTEN 0      4096                            *:22000            *:*    users:(("syncthing",pid=2103,fd=26))                                 
+tcp   LISTEN 0      4096                         [::]:5355          [::]:*                                                                         
+tcp   LISTEN 0      128                          [::]:22            [::]:*                                                                         
+tcp   LISTEN 0      4096   [fd7a:115c:a1e0::e333:e31]:44911         [::]:*                                                                         

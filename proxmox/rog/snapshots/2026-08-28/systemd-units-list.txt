@@ -1,0 +1,36 @@
+total 36
+drwxr-xr-x. 1 jevonx jevonx 538 Aug 23 17:08 .
+drwxr-xr-x. 1 jevonx jevonx   8 May  7 16:54 ..
+-rw-r--r--. 1 jevonx jevonx 486 Aug 23 17:08 achievement-hub.service
+drwxr-xr-x. 1 jevonx jevonx 166 Aug 23 17:10 default.target.wants
+drwxr-xr-x. 1 jevonx jevonx  24 Aug 23 12:23 graphical-session.target.wants
+-rw-r--r--. 1 jevonx jevonx 189 Jun 18 17:52 link-game-saves.path
+-rw-r--r--. 1 jevonx jevonx 139 Jun 18 17:52 link-game-saves.service
+-rw-r--r--. 1 jevonx jevonx 558 Aug 23 14:35 ludusavi-backup.service
+-rw-r--r--. 1 jevonx jevonx 198 Aug 23 14:35 ludusavi-backup.timer
+-rw-r--r--. 1 jevonx jevonx 195 Jun 18 17:52 smart-save-checker.path
+-rw-r--r--. 1 jevonx jevonx 219 Jun 18 17:52 smart-save-checker.service
+-rw-r--r--. 1 jevonx jevonx 175 Jun 18 17:52 smart-save-checker.timer
+-rw-r--r--. 1 jevonx jevonx 368 Jul 11 22:11 syncthing.service
+drwxr-xr-x. 1 jevonx jevonx  90 Aug 23 14:35 timers.target.wants
+---SYSTEM-UNITS---
+ls: cannot access '/etc/systemd/system/*.timer': No such file or directory
+lrwxrwxrwx. 1 root root 41 Aug 22 16:58 /etc/systemd/system/dbus-org.bluez.service -> /usr/lib/systemd/system/bluetooth.service
+lrwxrwxrwx. 1 root root 41 Aug 22 16:58 /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service -> /usr/lib/systemd/system/firewalld.service
+lrwxrwxrwx. 1 root root 44 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.Avahi.service -> /usr/lib/systemd/system/avahi-daemon.service
+lrwxrwxrwx. 1 root root 45 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.home1.service -> /usr/lib/systemd/system/systemd-homed.service
+lrwxrwxrwx. 1 root root 44 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.ModemManager1.service -> /usr/lib/systemd/system/ModemManager.service
+lrwxrwxrwx. 1 root root 57 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service -> /usr/lib/systemd/system/NetworkManager-dispatcher.service
+lrwxrwxrwx. 1 root root 44 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.oom1.service -> /usr/lib/systemd/system/systemd-oomd.service
+lrwxrwxrwx. 1 root root 48 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.resolve1.service -> /usr/lib/systemd/system/systemd-resolved.service
+lrwxrwxrwx. 1 root root 40 Aug 22 16:58 /etc/systemd/system/dbus-org.freedesktop.thermald.service -> /usr/lib/systemd/system/thermald.service
+lrwxrwxrwx. 1 root root 43 Aug 22 16:58 /etc/systemd/system/dbus.service -> /usr/lib/systemd/system/dbus-broker.service
+lrwxrwxrwx. 1 root root 36 Aug 22 16:58 /etc/systemd/system/display-manager.service -> /usr/lib/systemd/system/sddm.service
+lrwxrwxrwx. 1 root root  9 Aug 22 16:58 /etc/systemd/system/fedora-atomic-desktop-appstream-cache-refresh.service -> /dev/null
+lrwxrwxrwx. 1 root root  9 Aug 22 16:58 /etc/systemd/system/iscsi.service -> /dev/null
+lrwxrwxrwx. 1 root root 42 Aug 22 16:58 /etc/systemd/system/org.freedesktop.intel_lpmd.service -> /usr/lib/systemd/system/intel_lpmd.service
+lrwxrwxrwx. 1 root root  9 Aug 22 16:59 /etc/systemd/system/power-profiles-daemon.service -> /dev/null
+lrwxrwxrwx. 1 root root  9 Aug 22 16:59 /etc/systemd/system/powerstation.service -> /dev/null
+lrwxrwxrwx. 1 root root  9 Aug 22 16:58 /etc/systemd/system/systemd-remount-fs.service -> /dev/null
+lrwxrwxrwx. 1 root root  9 Aug 22 16:59 /etc/systemd/system/tuned-ppd.service -> /dev/null
+lrwxrwxrwx. 1 root root  9 Aug 22 16:59 /etc/systemd/system/tuned.service -> /dev/null

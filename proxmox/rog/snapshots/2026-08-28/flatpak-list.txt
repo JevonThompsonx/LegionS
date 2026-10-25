@@ -1,0 +1,93 @@
+Brave	com.brave.Browser	1.93.138	stable	system
+Protontricks	com.github.Matoking.protontricks	1.14.1	stable	system
+Ludusavi	com.github.mtkennerly.ludusavi	0.31.0	stable	system
+Flatseal	com.github.tchx84.Flatseal	2.4.1	stable	system
+SyncThingy	com.github.zocker_160.SyncThingy	0.8.3	stable	system
+Extension Manager	com.mattjakeman.ExtensionManager	0.6.5	stable	system
+Moonlight	com.moonlight_stream.Moonlight	6.1.0	stable	system
+Nextcloud Desktop Client	com.nextcloud.desktopclient.nextcloud	34.0.2	stable	system
+DistroShelf	com.ranfdev.DistroShelf	1.5.2	stable	system
+RustDesk	com.rustdesk.RustDesk	1.4.9	stable	system
+ProtonPlus	com.vysp3r.ProtonPlus	0.6.4	stable	system
+Warehouse	io.github.flattool.Warehouse	2.2.0	stable	system
+Ryujinx (Ryubing)	io.github.ryubing.Ryujinx	1.3.3	stable	system
+Mission Center	io.missioncenter.MissionCenter	1.2.0	stable	system
+Tuner	org.altlinux.Tuner	0.7.0	stable	system
+Calculator	org.gnome.Calculator	50.0	stable	system
+Calendar	org.gnome.Calendar	50.0	stable	system
+Characters	org.gnome.Characters	50.0	stable	system
+Contacts	org.gnome.Contacts	50.0	stable	system
+Logs	org.gnome.Logs	50.0	stable	system
+Image Viewer	org.gnome.Loupe	50.0	stable	system
+Sushi	org.gnome.NautilusPreviewer	50.0	stable	system
+Document Viewer	org.gnome.Papers	50.2	stable	system
+Video Player	org.gnome.Showtime	50.0	stable	system
+Text Editor	org.gnome.TextEditor	50.1	stable	system
+Weather	org.gnome.Weather	50.0	stable	system
+Disk Usage Analyzer	org.gnome.baobab	50.0	stable	system
+Clocks	org.gnome.clocks	50.0	stable	system
+Fonts	org.gnome.font-viewer	50.0	stable	system
+Jellyfin Desktop	org.jellyfin.JellyfinDesktop	2.0.0	stable	system
+RetroArch	org.libretro.RetroArch	1.22.2	stable	system
+Firefox	org.mozilla.firefox	154.0	stable	system
+Virtual Machine Manager	org.virt_manager.virt-manager	5.1.0	stable	system
+---FLATPAK-ALL---
+Brave	com.brave.Browser	1.93.138	stable	system
+Protontricks	com.github.Matoking.protontricks	1.14.1	stable	system
+Ludusavi	com.github.mtkennerly.ludusavi	0.31.0	stable	system
+Flatseal	com.github.tchx84.Flatseal	2.4.1	stable	system
+SyncThingy	com.github.zocker_160.SyncThingy	0.8.3	stable	system
+Extension Manager	com.mattjakeman.ExtensionManager	0.6.5	stable	system
+Moonlight	com.moonlight_stream.Moonlight	6.1.0	stable	system
+Nextcloud Desktop Client	com.nextcloud.desktopclient.nextcloud	34.0.2	stable	system
+GStreamer VA-API	com.obsproject.Studio.Plugin.GStreamerVaapi	0.4.2	stable	system
+GStreamer	com.obsproject.Studio.Plugin.Gstreamer	0.4.1	stable	system
+OBS VkCapture	com.obsproject.Studio.Plugin.OBSVkCapture	1.5.6	stable	system
+DistroShelf	com.ranfdev.DistroShelf	1.5.2	stable	system
+RustDesk	com.rustdesk.RustDesk	1.4.9	stable	system
+ProtonPlus	com.vysp3r.ProtonPlus	0.6.4	stable	system
+Warehouse	io.github.flattool.Warehouse	2.2.0	stable	system
+Ryujinx (Ryubing)	io.github.ryubing.Ryujinx	1.3.3	stable	system
+Mission Center	io.missioncenter.MissionCenter	1.2.0	stable	system
+Tuner	org.altlinux.Tuner	0.7.0	stable	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-24.08.35	24.08	system
+Freedesktop Platform	org.freedesktop.Platform	freedesktop-sdk-25.08.16	25.08	system
+i386	org.freedesktop.Platform.Compat.i386		25.08	system
+Mesa	org.freedesktop.Platform.GL.default	26.1.5	24.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	26.1.5	24.08extra	system
+Mesa	org.freedesktop.Platform.GL.default	26.1.6	25.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL.default	26.1.6	25.08-extra	system
+Mesa	org.freedesktop.Platform.GL32.default	26.1.6	25.08	system
+Mesa (Extra)	org.freedesktop.Platform.GL32.default	26.1.6	25.08-extra	system
+MangoHud	org.freedesktop.Platform.VulkanLayer.MangoHud	0.8.4	25.08	system
+OBS VkCapture tools	org.freedesktop.Platform.VulkanLayer.OBSVkCapture	1.5.6	25.08	system
+vkBasalt	org.freedesktop.Platform.VulkanLayer.vkBasalt	0.3.2.10	25.08	system
+Codecs Extra Extension	org.freedesktop.Platform.codecs-extra		25.08-extra	system
+openh264	org.freedesktop.Platform.openh264	2.5.1	2.5.1	system
+Calculator	org.gnome.Calculator	50.0	stable	system
+Calendar	org.gnome.Calendar	50.0	stable	system
+Characters	org.gnome.Characters	50.0	stable	system
+Contacts	org.gnome.Contacts	50.0	stable	system
+Logs	org.gnome.Logs	50.0	stable	system
+Image Viewer	org.gnome.Loupe	50.0	stable	system
+Sushi	org.gnome.NautilusPreviewer	50.0	stable	system
+Document Viewer	org.gnome.Papers	50.2	stable	system
+GNOME Application Platform version 49	org.gnome.Platform		49	system
+GNOME Application Platform version 50	org.gnome.Platform		50	system
+Video Player	org.gnome.Showtime	50.0	stable	system
+Text Editor	org.gnome.TextEditor	50.1	stable	system
+Weather	org.gnome.Weather	50.0	stable	system
+Disk Usage Analyzer	org.gnome.baobab	50.0	stable	system
+Clocks	org.gnome.clocks	50.0	stable	system
+Fonts	org.gnome.font-viewer	50.0	stable	system
+Jellyfin Desktop	org.jellyfin.JellyfinDesktop	2.0.0	stable	system
+Adwaita theme	org.kde.KStyle.Adwaita		5.15-25.08	system
+Adwaita theme	org.kde.KStyle.Adwaita		6.10	system
+Adwaita theme	org.kde.KStyle.Adwaita		6.11	system
+KDE Application Platform	org.kde.Platform		5.15-25.08	system
+KDE Application Platform	org.kde.Platform		6.10	system
+KDE Application Platform	org.kde.Platform		6.11	system
+QAdwaitaDecorations	org.kde.WaylandDecoration.QAdwaitaDecorations		5.15-25.08	system
+RetroArch	org.libretro.RetroArch	1.22.2	stable	system
+Firefox	org.mozilla.firefox	154.0	stable	system
+Virtual Machine Manager	org.virt_manager.virt-manager	5.1.0	stable	system
