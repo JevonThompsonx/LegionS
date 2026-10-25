@@ -4,7 +4,9 @@
 
 ## Start here
 - [README.md](README.md): machine reference + layout table
+- [OVERVIEW.md](OVERVIEW.md): single narrative entry point (merged, human-readable)
 - [INDEX.md](INDEX.md): full file/directory catalog
+- [TASKS.md](TASKS.md): consolidated task backlog index
 - [MANIFEST.json](MANIFEST.json): machine-readable file manifest (paths, sizes, sha256)
 - [AGENTS.md](AGENTS.md): agent working notes, gates, known gaps
 

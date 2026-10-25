@@ -1,7 +1,7 @@
 {
   "repo": "LegionS",
   "root": "/home/user/Projects/LegionS",
-  "file_count": 168,
+  "file_count": 171,
   "files": [
     {
       "path": ".editorconfig",
@@ -41,8 +41,8 @@
     },
     {
       "path": "INDEX.md",
-      "size": 4228,
-      "sha256": "801ddb67ddfc251bf5d434e540aa9f3a177dce733edd73ed946c1cc0d952db65",
+      "size": 4397,
+      "sha256": "7657691bddf459ccf4ae0397c21462d228975fff3905b352f1c2c502bc26ab91",
       "category": "doc"
     },
     {
@@ -58,15 +58,27 @@
       "category": "build"
     },
     {
+      "path": "OVERVIEW.md",
+      "size": 3395,
+      "sha256": "32638e6b5bf6b375b59ae40e90b6f859a306a46764b98e07b3fe94e761ab029c",
+      "category": "doc"
+    },
+    {
       "path": "README.md",
-      "size": 2861,
-      "sha256": "3c14ac2272f8c7623c81ec7f76ca05845678ada10efa04a9821c9ab5d6bff6ca",
+      "size": 2938,
+      "sha256": "7e64bf7120525f23565e8c8f5ed5dce8ce2c2b53a49fe76f9d18e2d86ff024c9",
       "category": "doc"
     },
     {
       "path": "ROG_DRIVE.md",
       "size": 3162,
       "sha256": "3f73b80f95ad9896080d16ed46e1ce3ac9955902c9c683d193e8d21000ddad24",
+      "category": "doc"
+    },
+    {
+      "path": "TASKS.md",
+      "size": 672,
+      "sha256": "6dc9e459eb0bc908d14e82da02058ae2ea85d8405bba800f39f43d43872856f1",
       "category": "doc"
     },
     {
@@ -77,8 +89,8 @@
     },
     {
       "path": "docs/README.md",
-      "size": 939,
-      "sha256": "bf5155e4ffac80b01353d295f424cb78cbe616b6fa1c67ab6737ee5c72dbca21",
+      "size": 1158,
+      "sha256": "32823d7c67a7da8dca3f963630e6abbd968a855d315c576ddc98e63e7c3376d2",
       "category": "doc"
     },
     {
@@ -91,6 +103,12 @@
       "path": "docs/gamepack-plan.md",
       "size": 41491,
       "sha256": "809c1d5e8d385ab74a865d95e130c38bd0b73d03fa5b64a232c1189a5183f391",
+      "category": "doc"
+    },
+    {
+      "path": "docs/machine-state.md",
+      "size": 1351,
+      "sha256": "02a7744d5a3858c93af403eefae45f703a3646e219ea62506c7e99972a6005ce",
       "category": "doc"
     },
     {
@@ -413,8 +431,8 @@
     },
     {
       "path": "llms.txt",
-      "size": 1886,
-      "sha256": "39d5fd9bb1f9b4be64b31d240c7d462ec6fc8747ee4a0b182d8ff6bc5248ddb4",
+      "size": 2026,
+      "sha256": "da22ce03712f4a4b57f26da6b9a67256eee91f51cdc3e9fe694040607497feb4",
       "category": "snapshot"
     },
     {

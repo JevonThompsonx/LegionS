@@ -17,7 +17,9 @@ file listing see [`MANIFEST.json`](MANIFEST.json).
 | [go.work](go.work) | build | Go workspace (`use ./gamepack`). |
 | [.editorconfig](.editorconfig) | config | Editor formatting rules. |
 | [.gitignore](.gitignore) | config | Git ignore rules. |
+| [OVERVIEW.md](OVERVIEW.md) | doc | Single narrative entry point (merged, human-readable). |
 | [INDEX.md](INDEX.md) | doc | This index. |
+| [TASKS.md](TASKS.md) | doc | Consolidated index of both task backlogs. |
 | [MANIFEST.json](MANIFEST.json) | data | Machine-readable file manifest (paths, sizes, sha256). |
 | [llms.txt](llms.txt) | doc | LLM crawler entry point (standard llms.txt). |
 

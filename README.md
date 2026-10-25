@@ -19,7 +19,7 @@ audit is vendored under `proxmox/` for convenience.
 
 ## Layout
 
-Full file/directory catalog: [INDEX.md](INDEX.md) (human) · [MANIFEST.json](MANIFEST.json) (machine).
+Full file/directory catalog: [INDEX.md](INDEX.md) (human) · [OVERVIEW.md](OVERVIEW.md) (narrative) · [TASKS.md](TASKS.md) (backlogs) · [MANIFEST.json](MANIFEST.json) (machine).
 
 | Path | Purpose |
 |------|---------|

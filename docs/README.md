@@ -1,9 +1,13 @@
 # docs — index
 
-See also the repo-wide [INDEX.md](../INDEX.md) and [MANIFEST.json](../MANIFEST.json).
+See also the repo-wide [INDEX.md](../INDEX.md), [OVERVIEW.md](../OVERVIEW.md),
+[TASKS.md](../TASKS.md), and [MANIFEST.json](../MANIFEST.json).
 
-- [`display-blackscreen.md`](display-blackscreen.md) — game-mode idle black-screen saga: root cause, fixes, verification checklist, recovery.
-- [`gamepack-plan.md`](gamepack-plan.md) — gamepack design/plan (live-verified ground truth, schemas, edge cases); live drift in `../gamepack/README.md`.
+| Document | Contents |
+|----------|----------|
+| [machine-state.md](machine-state.md) | Consolidated historical machine state (shortcuts, unlaunched, saves, steam, current). |
+| [display-blackscreen.md](display-blackscreen.md) | game-mode idle black-screen saga: root cause, fixes, verification, recovery. |
+| [gamepack-plan.md](gamepack-plan.md) | gamepack design/plan (live-verified ground truth, schemas, edge cases); live drift in `../gamepack/README.md`. |
 
 ## Related docs outside docs/
 
